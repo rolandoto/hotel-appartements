@@ -12,11 +12,11 @@ const Footer =() =>{
     };
 
     return (
-            <footer className="bg-black   text-white py-8">
+            <footer className="bg-gray-100   text-black py-8">
                 <div className="mx-auto max-w-7xl p-4  flex flex-col md:flex-row justify-between items-start md:items-center">
                 <div className="flex">
                     <img
-                        src="https://github.com/rolandoto/image-pms/blob/main/Logo-Gallery-Colores.png?raw=true"
+                        src="https://github.com/rolandoto/image-pms/blob/main/Logo%20apartments%20.png?raw=true"
                         alt="Logo de Gallery Hotel" 
                         width="100" 
                         height="100"
@@ -27,9 +27,9 @@ const Footer =() =>{
                 <div>
                     <div className="">
                         <ul className="space-y-2">
-                            <li className="flex items-center"> <IconFaWhatsapp /> +57 315 223 44 83</li>
-                            <li className="flex items-center mr-6">  <IconsMdEmail />  reservas@galleryhotel.co</li>
-                            <li className="flex items-center"> <IconFaMapMarkerAlt/>  Cl. 47 #41 - 55, Medellín, Colombia</li>
+                            <li className="flex items-center"> <IconFaWhatsapp /> +57 301 779 01 17</li>
+                            <li className="flex items-center mr-6">  <IconsMdEmail  color={"black"}/> reservas@appartments.com.co</li>
+                            <li className="flex items-center"> <IconFaMapMarkerAlt/> Cra. 44 #47-02, La Candelaria, Medellín</li>
                         </ul>
                     
                     </div>
@@ -44,7 +44,7 @@ const Footer =() =>{
                 </div>
                
                 <div className=" ">
-                    <div class="bg-black text-white flex items-center justify-center ">
+                    <div class="bg-gray-100 text-black flex items-center justify-center ">
                         <div class="w-full max-w-md mt-6">
                             <h2 class="text-center text-xl font-semibold mb-6">CONTACTO</h2>
                             <form class="space-y-4">
@@ -63,10 +63,10 @@ const Footer =() =>{
                 </div>
                 
                 </div>
-                <div className="text-center border-t-1  mx-auto max-w-7xl  text-white mt-8">
+                <div className="text-center border-t-1  mx-auto max-w-7xl  text-black mt-8">
                     <div className=" flex  flex-col sm:flex-row  justify-between mt-8 mx-auto max-w-7xl items-center">
                             <div>
-                                Copyright © 2024 – All Rights Reserved Gallery Hotel
+                                Copyright © 2024 – All Rights Reserved Hotel Apartments
                             </div>
                                     <div className=" ">
                                     <div className="flex space-x-4">

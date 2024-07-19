@@ -2,6 +2,8 @@ import React, { useEffect } from "react"
 import { useParams } from "react-router-dom";
 import Header from "../../Component/Header/Header";
 import Footer from "../../Component/Footer/Footer";
+import UseCart from "../../Hooks/UseCart";
+import Cart from "../../Component/Cart/Cart";
 
 const DetailEvents =() =>{
 
@@ -12,6 +14,8 @@ const DetailEvents =() =>{
 
     let { userId } = useParams();
 
+    const {getCartSubtotal} = UseCart()
+    const subtotal = getCartSubtotal()
     const eventData = [
         {    
          id:2,
@@ -67,9 +71,13 @@ const DetailEvents =() =>{
 
     return (<>
                <Header/>
-               <div className="relative bg-cover bg-center h-[310px]" style={{ 
-                backgroundImage: `url(https://raw.githubusercontent.com/rolandoto/image-pms/main/1155970062-4-page-slider-1-Habitacion-todos-jacuzzi-ventilador-centro-de-medellin-antioquia-colombia.webp)`,}}>
-                    <div className="absolute inset-0 bg-black opacity-50"></div>
+
+                
+            {subtotal >0 &&<Cart    
+                            /> } 
+               <div className="relative bg-cover bg-center h-[410px]" style={{ 
+                backgroundImage: `url(https://grupo-hoteles.com/storage/app/10/rooms/283422645-48-rooms-slider-1-Habitacion-Superior-Hotel-en-Medellin-appartments.webp)`,}}>
+                    <div className="absolute inset-0 "></div>
                     <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
                         <h1 className="text-4xl md:text-6xl lg:text-6xl font-lora">
                            Eventos
@@ -79,7 +87,7 @@ const DetailEvents =() =>{
 
                 {SearFindEvents ? 
                 <div className="mx-auto max-w-4xl p-6 mb-24">
-                    <h1 className="text-[30px] text-center text-orange-500  font-lora  mb-6">{SearFindEvents.title}</h1>
+                    <h1 className="text-[30px] text-center text-green-500  font-lora  mb-6">{SearFindEvents.title}</h1>
                         <div className=" w-full p-4">
                             <img
                                     src={SearFindEvents.imageUrl}

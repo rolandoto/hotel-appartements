@@ -1,10 +1,42 @@
-import React from "react"
+import React, { useEffect } from "react"
 import CardCheckout from "../CardCheckout/CardCheckout"
 import FormValues from "../FormValues/FormValues"
+import { useSelector } from "react-redux"
+import UseHotelActions from "../../Actions/useHotelsActions"
 
 const FormCheckout=({Country,handleSubmit,loading,formErrors,handleChange,formValues,cart,subtotal}) =>{
 
-    return (<div className= "bg-gray-100 " >
+    const {hotelList,loadingHotel,errorHotel}= useSelector((state) => state.Hotel)
+    const {getListHotel} =UseHotelActions()
+
+    const fetchDate =async() =>{
+      await getListHotel()
+    }
+  
+    useEffect(() =>{
+      fetchDate()
+    },[])
+
+    const FindIdHotel=(hotel) =>{
+        return hotel.id_hotel ==10
+    }
+    
+    const hotel = hotelList.find(FindIdHotel) 
+  
+    const FillContent =()=>{
+        if(loadingHotel){
+                return <p>cargando</p>
+        }
+
+        if(errorHotel){
+            return   <h1>Error en el servicio</h1>
+        }
+
+        return  hotel?.nombre
+    }
+    
+
+    return (<div className= "bg-white " >
                 <div className="flex justify-center   min-h-screen">
                     <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-7xl">
                     <div className="flex flex-col md:flex-row">
@@ -25,8 +57,8 @@ const FormCheckout=({Country,handleSubmit,loading,formErrors,handleChange,formVa
                             <div className="p-6 border border-gray-300 rounded-lg">
                                 <h2 className="text-xl font-bold mb-4">Resumen de tu reserva</h2>
                                     <div className="mb-4">
-                                        <h3 className="text-lg font-semibold">Hotel Gallery Medellín</h3>
-                                        <p className="text-gray-600">Cl. 47 #41 - 55, Medellín, Colombia</p>
+                                        <h3 className="text-lg font-semibold">{FillContent()}</h3>
+                                        <p className="text-gray-600">Cra. 44 #47-02, La Candelaria, Medellín</p>
                                     </div>
                                     {cart.map((itemCardRoom,e) =>(
                                     <CardCheckout key={e}   {...itemCardRoom} />

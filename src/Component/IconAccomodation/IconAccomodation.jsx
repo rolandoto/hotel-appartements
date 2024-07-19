@@ -16,12 +16,12 @@ const IconAccomodation =({title}) =>{
 
     return (  <ContainerIcons  >
 
-                {title != "Box Ventilador"  &&  
+                {title != "Estandar"  &&  
                     <div className="flex items-center" >
                     <IconsSnow  /> <span span className="ml-2">Aire acondicionado</span>
                     </div> }  
                     <div className="flex items-center" >
-                        <IconsPiBedThin /> <span span className="ml-2">Cama matrimonial</span>
+                       <IconsPiBedThin /> <span span className="ml-2">   {title =="Twin" ? "2 Camas pequeña" :"Cama doble"}</span>
                     </div>
                     <div className="flex items-center" >
                     <IconShower  /> <span className="ml-2">Baño privado con ducha</span>
