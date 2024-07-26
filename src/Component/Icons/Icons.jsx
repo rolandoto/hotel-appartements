@@ -30,7 +30,7 @@ import { RiBankFill } from "react-icons/ri";
 import { MdOutlineEmail } from "react-icons/md";
 import { Tooltip } from "react-tooltip";
 import { PiBedThin } from "react-icons/pi";
-
+import { FaCheckCircle } from "react-icons/fa";
 
 export const IconsSnow =() =>{
     const key = `my-tooltip`;
@@ -214,12 +214,9 @@ export const IconsGiForkKnifeSpoon =() =>{
     return <GiForkKnifeSpoon   color="#22c55e" className="" fontSize={30}  />
 }
 
-
 export const IconsaCar =() =>{
     return <FaCar   color="#22c55e" className="" fontSize={30}  />
 }
-
-
 
 export const IconsFaSquareParking =() =>{
     return <FaSquareParking   color="#22c55e" className="" fontSize={30}  />
@@ -237,13 +234,14 @@ export const IconsFaConciergeBell =() =>{
     return <FaConciergeBell   color="#22c55e" className="" fontSize={30}  />
 }
 
-
 export const IconsRiBankFill =() =>{
     return <RiBankFill   color="#22c55e" className="" fontSize={30}  />
 }
-
 
 export const IconsMdEmail =({color}) =>{
     return <MdOutlineEmail   color={color} className="mr-2" fontSize={30}  />
 }
 
+export const IconFaCheckCircle  =({color}) =>{
+    return <FaCheckCircle    color={color} className="mr-2" fontSize={70}  />
+}
