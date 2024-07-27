@@ -25,8 +25,7 @@ const CardEvents =({ID, Name,DescriptionEvent1,Start_date,End_date,img_events}) 
                 <p className="text-gray-500 mb-4">{DescriptionEvent1}</p>
                 </div>
     </Link>
-)
-    }
+)}
 
 }
 
