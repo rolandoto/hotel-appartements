@@ -4,6 +4,7 @@ import Header from "../../Component/Header/Header";
 import Footer from "../../Component/Footer/Footer";
 import UseCart from "../../Hooks/UseCart";
 import Cart from "../../Component/Cart/Cart";
+import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
 
 const EventsNext =()  =>{
     useEffect(() => {
@@ -27,6 +28,7 @@ const EventsNext =()  =>{
                         </h1>
                     </div>
                 </div>
+                <WhatsappButton />
             <Events />
             <Footer/>
         </>)

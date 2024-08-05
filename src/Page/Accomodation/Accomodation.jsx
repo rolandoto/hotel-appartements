@@ -23,6 +23,7 @@ import LoadingOverlay from "../../Component/LoadingCreateReserva/LoadingOverlay"
 import HeaderAccomodation from "../../Component/HeaderAccomodation/HeaderAccomodation";
 import Footer from "../../Component/Footer/Footer";
 import useRoomsPromotions from "../../Actions/useRoomsPromotions";
+import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
 
 const Accommodation = () => {
 
@@ -49,8 +50,10 @@ const Accommodation = () => {
     const {getCartSubtotal} = UseCart()
     const subtotal = getCartSubtotal()
     const [checkbox,setCheckBox] =useState(false)
-    const formattedStartDate = moment(state[0].startDate).format('YYYY-MM-DD');
-    const formattedEndDate = moment(state[0].endDate).format('YYYY-MM-DD');
+    const startDate = state[0]?.startDate;
+    const endDate = state[0]?.endDate;
+    const formattedStartDate = startDate ? moment(startDate).format('YYYY-MM-DD') : '';
+    const formattedEndDate = endDate ? moment(endDate).format('YYYY-MM-DD') : '';
     const formattedStartDateToString = moment(state[0]?.startDate).format('DD MMM YYYY').toLowerCase();
     const formattedEndDateToString = moment(state[0]?.endDate).format('DD MMM YYYY').toLowerCase();
     const [promotion,setPromotions] =useState(false)
@@ -175,6 +178,9 @@ const Accommodation = () => {
 
   
     const FillContent =()=>{
+      if(!formattedStartDate && !formattedEndDate){
+        return   <EmpyCart title={" Busca tu reserva en el calendario."} />
+      }
       if(loading){
        return  (
                 <div  className=" lg:flex    mx-auto   max-w-5xl items-center justify-between p-4 lg:px-8">
@@ -184,7 +190,10 @@ const Accommodation = () => {
       }if(error){
         return    <EmpyCart title={"No tenemos habitaciones disponibles para esta ocupación"} />
                 }
-        return <>  {hotel?.availableRooms?.map((List,index) => <CardAccomodation promotion={promotion}  key={index} {...List}/>)}</>
+        return <>  {hotel?.availableRooms?.map((List,index) => <CardAccomodation 
+                                                                promotion={promotion}  
+                                                                totalCountAdults={totalCountAdults}
+                                                                key={index} {...List}/>)}</>
     }
     const monthsToShow = window.innerWidth >= 700 ? 2 : 1;
 
@@ -229,7 +238,7 @@ const Accommodation = () => {
             {loadingCart && <LoadingOverlay title={"Cargando..."} />}
             <Header/>
 
-          
+            <WhatsappButton />
             {subtotal >0 &&<Cart    
                             checkbxo={checkbox} 
                             handClickCart={handClickCart} /> } 
@@ -303,7 +312,7 @@ const Accommodation = () => {
                           locale={esLocale}
                       />
                      <button
-                      className="mt-6 bg-orange-500 text-white px-6 py-3 rounded-lg hover:bg-[#ff7a45]"
+                      className="mt-6 bg-green-500  text-white px-6 py-3 rounded-lg hover:bg-green-500 "
                       onClick={(e) => setContextMenuPosition(false) }
                       style={{
                         position: 'absolute',
