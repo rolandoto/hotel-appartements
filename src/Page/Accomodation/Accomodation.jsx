@@ -59,14 +59,11 @@ const Accommodation = () => {
     const [promotion,setPromotions] =useState(false)
     const [visible, setVisible] = useState(false);
        
-
     const handSubmitCupon =() =>{
       setPromotions(true)
       setVisible(false)
     }
 
-
-    
     const {RoomsGetPromotions,loadingGetRoomsProtions,errorGetRoomsProtions}= useSelector((state) => state.RoomsPromotios)
     
     const  {GetRoomsPromotions} = useRoomsPromotions()
@@ -129,11 +126,9 @@ const Accommodation = () => {
       )}</>
     }
 
-    
     useEffect(() =>{
       FetchDate ()
     },[])
-  
 
     const PostHotelByIdHotel = useCallback(async () => {
         setContextMenuPosition(false);
