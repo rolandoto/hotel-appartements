@@ -24,6 +24,7 @@ import HeaderAccomodation from "../../Component/HeaderAccomodation/HeaderAccomod
 import Footer from "../../Component/Footer/Footer";
 import useRoomsPromotions from "../../Actions/useRoomsPromotions";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
+import { Environment } from "../../Config/Config";
 
 const Accommodation = () => {
 
@@ -131,10 +132,10 @@ const Accommodation = () => {
     },[])
 
     const PostHotelByIdHotel = useCallback(async () => {
-        setContextMenuPosition(false);
-        setContextShowMenuPeople(false)
-        await getHotel({ id: 10, desde:formattedStartDate, hasta: formattedEndDate,counPeople:totalCountAdults });
-    }, [formattedStartDate,formattedEndDate,totalCountAdults]);
+      setContextMenuPosition(false);
+      setContextShowMenuPeople(false)
+      await getHotel({propertyID:Environment.propertyID,startDate:formattedStartDate, endDate: formattedEndDate,token:Environment.Token,counPeople:totalCountAdults });
+  }, [formattedStartDate,formattedEndDate,totalCountAdults]);
 
     useEffect(() =>{
       PostHotelByIdHotel()
@@ -183,12 +184,16 @@ const Accommodation = () => {
                 </div> 
        ) 
       }if(error){
-        return    <EmpyCart title={"No tenemos habitaciones disponibles para esta ocupación"} />
+        return     <EmpyCart title={"Lo sentimos, en este momento no contamos con alojamientos disponibles para las fechas seleccionadas. Por favor, modifique las fechas para generar una nueva búsqueda. O puede contactar a nuestro equipo para obtener más información llamando al +573017790117."} />
                 }
-        return <>  {hotel?.availableRooms?.map((List,index) => <CardAccomodation 
-                                                                promotion={promotion}  
-                                                                totalCountAdults={totalCountAdults}
-                                                                key={index} {...List}/>)}</>
+        return <>  {hotel?.data?.map((List,index) => <CardAccomodation  
+                                                    counPeople={hotel.counPeople}
+                                                    endDate={hotel.endDate}
+                                                    startDate={hotel.startDate}
+                                                    nightsToday={hotel.nights}
+                                                    promotion={promotion} 
+                                                    totalCountAdults={totalCountAdults}
+                                                    key={index} {...List}/>)}</>
     }
     const monthsToShow = window.innerWidth >= 700 ? 2 : 1;
 
