@@ -32,11 +32,16 @@ const validPromotions =promotion ? discountedPrice :  roomRate
 const {AddCart } =useCartActions()
 
 const handleAddToCart = () => {
-if(cart.every((item) =>item.quantity+1 <= roomsAvailable)){
-AddCart({ roomTypeID, roomTypeName,quantity: 1,Price:roomRate,roomsAvailable,startDate,endDate,room_image:roomTypePhotos[0].image,nights:nightsToday,person:counPeople,persontotal:counPeople}); 
-}else{
-toast.error("no habitacion disponible")
-}
+        const existingRoom = cart.find(item => item.roomTypeID === roomTypeID);
+        if (existingRoom) {
+            if(existingRoom.quantity +1 > roomsAvailable){
+                toast.error("no hay habitaciones")
+            }else{
+                AddCart({ roomTypeID, roomTypeName,quantity: 1,Price:roomRate,roomsAvailable,startDate,endDate,room_image:roomTypePhotos[0].image,nights:nightsToday,person:counPeople,persontotal:counPeople}); 
+            }
+        }else{
+            AddCart({ roomTypeID, roomTypeName,quantity: 1,Price:roomRate,roomsAvailable,startDate,endDate,room_image:roomTypePhotos[0].image,nights:nightsToday,person:counPeople,persontotal:counPeople}); 
+        }
 };
     return (   
             <MainAccomodationRoom className=" lg:flex    mx-auto   max-w-5xl items-center justify-between p-4 lg:px-8"   >     
