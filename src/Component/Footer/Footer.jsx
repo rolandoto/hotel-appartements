@@ -4,11 +4,11 @@ import {  IconFaFacebookF, IconFaInstagram, IconFaMapMarkerAlt, IconFaWhatsapp, 
 const Footer =() =>{
 
     const handleFacebook = () => {
-        window.open("https://www.facebook.com/galleryhotelmedellin", "_blank");
+        window.open("https://www.facebook.com/apartments.med", "_blank");
     };
 
     const handleInstagram = () => {
-        window.open("https://www.instagram.com/galleryhotelmed/", "_blank");
+        window.open("https://www.instagram.com/appartments.med", "_blank");
     };
 
     return (

@@ -13,10 +13,10 @@ const RoomPresentaion =() =>{
                 <div className="md:w-1/2 p-4 text-">
                     <h2 className="text-3xl font-normal text-center  text-green-500 text-[30px] font-lora ">Reserva tu habitación hoy mismo</h2>
                     <p className="text-gray-700 text-justify mt-8 mb-4">
-                    Nuestras habitaciones están diseñadas para ofrecer comodidad y estilo, a la vez que te sumergen en la vibrante escena artística de Medellín. Cada habitación está decorada con obras de artistas locales, creando un ambiente único e inspirador.
+                    Ubicado en una zona céntrica, Hotel Apartments ofrece la combinación perfecta entre confort y conveniencia. Cada una de nuestras habitaciones está equipada con todo lo que necesitas para sentirte como en casa: desde camas cómodas y modernas instalaciones, hasta Wi-Fi gratuito y televisión inteligente. Además, algunas habitaciones cuentan con cocinas totalmente equipadas, ideales para estancias más largas.
                     </p>
                     <p className="text-gray-700 text-justify mb-4">
-                    Gallery Hotel está ubicado en el corazón del centro de Medellín, a solo unos pasos de las principales atracciones turísticas, restaurantes y bares. La ubicación perfecta para explorar la ciudad y descubrir todo lo que tiene para ofrecer.
+                    Hotel Apartments está estratégicamente situado a solo unos pasos de las principales atracciones turísticas, restaurantes y bares de Medellín. Nuestra ubicación te permite explorar la ciudad con facilidad y disfrutar de todo lo que tiene para ofrecer.
                     </p>
                     <button onClick={HandNext}  className="text-white bg-green-500 mt-4  w-[200px] p-3 rounded hover:bg-green-600"><span className=" text-[20px]" >Reservar</span></button>
                 </div>
