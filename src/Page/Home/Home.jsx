@@ -107,7 +107,7 @@ const subtotal = getCartSubtotal()
   ];
   
   const features = [
-      { icon: <IconsFaGlassMartini/>, title: 'Cóctel de bienvenida' },
+      { icon: <IconsFaGlassMartini />, title: 'Cóctel de bienvenida' },
       { icon: <IconsGiForkKnifeSpoon/>, title: 'Desayuno incluido' },
       { icon: <IconsFaConciergeBell/>, title: 'Recepción 24 horas' },
       { icon: <IconsaCar/>, title: 'Variedad de transporte', description: 'Metro, tranvía, autobús, taxi' },
@@ -317,19 +317,19 @@ const subtotal = getCartSubtotal()
            <Header  scrollToRoomSectionEvent={scrollToRoomSectionEvent}   />
            <div className="relative bg-cover bg-center h-[650px]" style={{ 
                 backgroundImage: `url(https://grupo-hoteles.com/storage/app/10/rooms/283422645-48-rooms-slider-1-Habitacion-Superior-Hotel-en-Medellin-appartments.webp)`,}}>
-            <div className="absolute inset-0 "></div>
-            <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-                <h1 className="text-4xl md:text-6xl lg:text-6xl font-lora">
-                  {loadingHotel ?"cargando " :hotel?.nombre}  
-                </h1>
-                <p className="mt-2 text-base md:text-xl lg:text-3xl font-lora font-normal">
-                    Más que un hotel, una experiencia artística
-                </p>
-                <button className="mt-6 bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-500" onClick={scrollToRoomSection}>
-                    Ver habitaciones
-                </button>
-            </div>
-        </div>
+              <div className="absolute inset-0 "></div>
+              <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+                  <h1 className="text-4xl md:text-6xl lg:text-6xl font-lora">
+                    {loadingHotel ?"cargando " :hotel?.nombre}  
+                  </h1>
+                  <p className="mt-2 text-base md:text-xl lg:text-3xl font-lora font-normal">
+                  Hotel en el centro de Medellín en armonía con la naturaleza
+                  </p>
+                  <button className="mt-6 bg-[#004e45] text-white px-6 py-3 rounded-lg hover:bg-[#004e45]" onClick={scrollToRoomSection}>
+                      Ver habitaciones
+                  </button>
+              </div>
+          </div>
 
             <CalenderSearchHome HandClickMenuPeople={HandClickMenuPeople} 
                                  formattedStartDateToString={formattedStartDateToString}

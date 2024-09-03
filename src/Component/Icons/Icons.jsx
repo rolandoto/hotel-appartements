@@ -208,35 +208,35 @@ export const IconsTiHome =() =>{
 }
 
 export const IconsFaGlassMartini =() =>{
-    return <FaMartiniGlassCitrus   color="#22c55e" className="" fontSize={30}  />
+    return <FaMartiniGlassCitrus   color="#004e45" className="" fontSize={30}  />
 }
 
 export const IconsGiForkKnifeSpoon =() =>{
-    return <GiForkKnifeSpoon   color="#22c55e" className="" fontSize={30}  />
+    return <GiForkKnifeSpoon   color="#004e45" className="" fontSize={30}  />
 }
 
 export const IconsaCar =() =>{
-    return <FaCar   color="#22c55e" className="" fontSize={30}  />
+    return <FaCar   color="#004e45" className="" fontSize={30}  />
 }
 
 export const IconsFaSquareParking =() =>{
-    return <FaSquareParking   color="#22c55e" className="" fontSize={30}  />
+    return <FaSquareParking   color="#004e45" className="" fontSize={30}  />
 }
 
 export const IconsFaStore =() =>{
-    return <FaStore   color="#22c55e" className="" fontSize={30}  />
+    return <FaStore   color="#004e45" className="" fontSize={30}  />
 }
 
 export const IconsFaBanSmoking =() =>{
-    return <FaBanSmoking   color="#22c55e" className="" fontSize={30}  />
+    return <FaBanSmoking   color="#004e45" className="" fontSize={30}  />
 }
 
 export const IconsFaConciergeBell =() =>{
-    return <FaConciergeBell   color="#22c55e" className="" fontSize={30}  />
+    return <FaConciergeBell   color="#004e45" className="" fontSize={30}  />
 }
 
 export const IconsRiBankFill =() =>{
-    return <RiBankFill   color="#22c55e" className="" fontSize={30}  />
+    return <RiBankFill   color="#004e45" className="" fontSize={30}  />
 }
 
 export const IconsMdEmail =({color}) =>{

@@ -9,6 +9,8 @@ const CardRoomDetail =({features,image,title,price}) =>{
         navigate("/Accomodation");
     }
 
+    
+
     return (
         <div  className="  p-6 rounded-lg relative ">
               <img
@@ -18,7 +20,7 @@ const CardRoomDetail =({features,image,title,price}) =>{
                 alt={title}
                 className="w-full h-auto md:h-[250px] mt-5 object-cover rounded-lg mb-4"
             />
-                <h3 className=" words  text-green-500 text-[23px]  mb-4">{title}</h3>
+                <h3 className=" words  text-[#004E45] text-[23px]  mb-4">{title}</h3>
                 <ul className="text-gray-700 h-[180px] text-left list-disc list-inside">
                 {features.map((feature, idx) => (
                     <li key={idx}>{feature}</li>
@@ -28,7 +30,7 @@ const CardRoomDetail =({features,image,title,price}) =>{
                     <div >
                         <strong className=" text-[20px] " >Desde ${parseInt(price).toLocaleString('es-CO')} cop</strong>
                     </div>
-                    <button onClick={handSubmitNextReservation} className="text-white bg-green-500 mt-4   w-[290px] md:w-[150px]  p-3 rounded hover:bg-green-500"><span className=" text-[20px]" >Reservar</span></button>                  
+                    <button onClick={handSubmitNextReservation} className="text-white bg-[#004E45]  mt-4   w-[290px] md:w-[150px]  p-3 rounded hover:bg-[#004E45] "><span className=" text-[20px]" >Reservar</span></button>                  
                 </div>
                                 
         </div>

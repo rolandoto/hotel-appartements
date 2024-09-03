@@ -12,14 +12,18 @@ const TitleWelcome  =() =>{
                     className="w-full h-auto rounded-lg shadow-lg"
                 />
                     </div>
-                <div className="md:w-1/2 p-4">
-                    <h2 className="text-3xl font-normal text-green-500 mb-4 font-lora text-[30px] text-center ">¡Bienvenido a Hotel Apartments! Más que un apartamento, un espacio de comodidad.</h2>
-                <p className="text-gray-700 text-justify	 mb-4">
-                Ubicado en una zona privilegiada, Hotel Apartments te ofrece un hogar lejos de casa. Nuestros apartamentos combinan elegancia y confort, proporcionando un espacio ideal tanto para estancias cortas como largas. Equipados con todas las comodidades modernas, nuestros apartamentos te permiten disfrutar de la privacidad y el confort que necesitas durante tu viaje.
+                <div className="md:w-1/2 p-4 items-center justify-center flex flex-col">
+                <img 
+                        className="w-[200px]" 
+                        src="https://github.com/rolandoto/image-pms/blob/main/Logo%20apartments%20.png?raw=true" 
+                        alt="Logo de Gallery Hotel" 
+                        width="100" 
+                        height="100"
+                        />
+                <p className="text-gray-700 text-justify	mt-4 mb-4">
+                Relájate en nuestros espacios diseñados pensando en tu comodidad. Hotel Apartments Medellín te ofrece todo lo que necesitas para disfrutar de una estancia inolvidable: habitaciones modernas y luminosas, una piscina infinita con vistas panorámicas a la ciudad, un coworking ideal para trabajar o estudiar, y un restaurante que deleitará tu paladar con los mejores sabores locales.
                 </p>
-                <p className="text-gray-700 text-justify	 ">
-                Ya sea que estés aquí por negocios o por placer, Hotel Apartments te asegura una experiencia relajante en un entorno acogedor y contemporáneo. Con fácil acceso a las principales atracciones y servicios de la ciudad, nuestros apartamentos son la opción ideal para quienes buscan un equilibrio entre comodidad y conveniencia.
-                </p>
+                
                 </div>
             </div>)
 

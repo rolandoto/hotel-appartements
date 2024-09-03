@@ -8,17 +8,18 @@ const RoomPresentaion =() =>{
         navigate("/Accomodation");
     }
 
-    return (  <div className="bg-[#f2fff5] py-12 px-4">
+    return (  <div className="bg-[#004E45] py-12 px-4">
                 <div className="container mx-auto max-w-7xl   flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 p-4 text-">
-                    <h2 className="text-3xl font-normal text-center  text-green-500 text-[30px] font-lora ">Reserva tu habitación hoy mismo</h2>
-                    <p className="text-gray-700 text-justify mt-8 mb-4">
+                    <h2 className="text-3xl font-normal text-center  text-white text-[30px] font-lora ">Conecta con la naturaleza en el corazón de Medellín…
+                    </h2>
+                    <p className="text-white text-justify mt-8 mb-4">
                     Ubicado en una zona céntrica, Hotel Apartments ofrece la combinación perfecta entre confort y conveniencia. Cada una de nuestras habitaciones está equipada con todo lo que necesitas para sentirte como en casa: desde camas cómodas y modernas instalaciones, hasta Wi-Fi gratuito y televisión inteligente. Además, algunas habitaciones cuentan con cocinas totalmente equipadas, ideales para estancias más largas.
                     </p>
-                    <p className="text-gray-700 text-justify mb-4">
+                    <p className="text-white text-justify mb-4">
                     Hotel Apartments está estratégicamente situado a solo unos pasos de las principales atracciones turísticas, restaurantes y bares de Medellín. Nuestra ubicación te permite explorar la ciudad con facilidad y disfrutar de todo lo que tiene para ofrecer.
                     </p>
-                    <button onClick={HandNext}  className="text-white bg-green-500 mt-4  w-[200px] p-3 rounded hover:bg-green-600"><span className=" text-[20px]" >Reservar</span></button>
+                    <button onClick={HandNext}  className="text-white border w-[200px] p-3 rounded hover:border-none"><span className=" text-[20px]" >Reservar</span></button>
                 </div>
                 <div className="md:w-1/2 p-4">
                 <img 

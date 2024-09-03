@@ -33,7 +33,7 @@ const Header =({scrollToRoomSectionEvent}) =>{
                         <a 
                          target="_blank"
                          href="https://www.google.com/maps/place/Cra.+44+%2347-2,+La+Candelaria,+Medell%C3%ADn,+La+Candelaria,+Medell%C3%ADn,+Antioquia/data=!4m2!3m1!1s0x8e442857010d3d3d:0x4a1527b0d0a1c02f?sa=X&ved=1t:242&ictx=111"
-                        className="text-white  bg-green-500 w-[150px] p-4 rounded hover:text-white">Cómo llegar</a>
+                        className="text-white  bg-[#004e45] w-[150px] p-4 rounded hover:text-white">Cómo llegar</a>
                     </div>
 
                     <div className="lg:hidden" >

@@ -122,8 +122,6 @@ const Checkout  =() =>{
         }
     }
 
-
-
     return (<>
         <Header />
         {loadingCart && <LoadingOverlay title={"Cargando..."} />}
