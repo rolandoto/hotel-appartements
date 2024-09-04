@@ -57,7 +57,7 @@ const Cart = () => {
 
       
     return (
-        <div className="fixed z-50 cart-shadow bg-green-500  bottom-0 left-0 right-0 flex flex-col md:flex-row items-center justify-between  p-4  rounded-t-lg">
+        <div className="fixed z-50 cart-shadow bg-[#004E45]  bottom-0 left-0 right-0 flex flex-col md:flex-row items-center justify-between  p-4  rounded-t-lg">
             <div className="flex items-center">
             <div className="ml-4">
                 <h3 className="text-2xl font-lora text-white">Habitaciones: {totalCount} </h3> {/* Update this line with the number of rooms */}

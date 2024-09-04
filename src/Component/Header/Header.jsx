@@ -25,9 +25,9 @@ const Header =({scrollToRoomSectionEvent}) =>{
                     </div>
 
                     <div className=" hidden lg:block   space-x-4">
-                        <Link to="/" className="text-black cursor-pointer text-[16px] font-normal  hover:text-green-400"  >Inicio</Link>
-                        <Link to="/Events" className="text-black cursor-pointer text-[16px] font-normal hover:text-green-400"   >Próximos eventos</Link>
-                        <Link to="/Accomodation" className="text-black  cursor-pointer text-[16px] font-normal hover:text-green-400"  >Reservas</Link>
+                        <Link to="/" className="text-black cursor-pointer text-[16px] font-normal  "  >Inicio</Link>
+                        <Link to="/Events" className="text-black cursor-pointer text-[16px] font-normal "   >Próximos eventos</Link>
+                        <Link to="/Accomodation" className="text-black  cursor-pointer text-[16px] font-normal "  >Reservas</Link>
                     </div>
                     <div className="hidden lg:block " >
                         <a 
@@ -63,18 +63,18 @@ const Header =({scrollToRoomSectionEvent}) =>{
             </div>
 
            {menuOpen &&  <div className="lg:hidden flex flex-col mt-4 space-y-2">
-                            <Link to="/" className="text-black text-[16px] font-normal  hover:text-[#ff7a45]" >
+                            <Link to="/" className="text-black text-[16px] font-normal  " >
                                 Inicio
                             </Link>
-                            <Link to="/Events" className="text-black text-[16px] font-normal  hover:text-[#ff7a45]"  >
+                            <Link to="/Events" className="text-black text-[16px] font-normal  "  >
                                 Próximos eventos
                             </Link>
-                            <Link  to="/Accomodation" className="text-black text-[16px] font-normal  hover:text-[#ff7a45]" >
+                            <Link  to="/Accomodation" className="text-black text-[16px] font-normal  ]" >
                                 Reservas
                             </Link>
                             <a  target="_blank"
                                 href="https://www.google.com/maps/place/Cra.+44+%2347-2,+La+Candelaria,+Medell%C3%ADn,+La+Candelaria,+Medell%C3%ADn,+Antioquia/data=!4m2!3m1!1s0x8e442857010d3d3d:0x4a1527b0d0a1c02f?sa=X&ved=1t:242&ictx=111"
-                                className="text-white bg-green-500 w-full p-4 rounded hover:bg-white-500"   
+                                className="text-white bg-[#004E45] w-full p-4 rounded hover:bg-white-500"   
                             >
                                 Cómo llegar
                             </a>

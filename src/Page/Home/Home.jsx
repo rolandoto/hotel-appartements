@@ -24,6 +24,8 @@ import Cart from "../../Component/Cart/Cart";
 import UseHotelActions from "../../Actions/useHotelsActions";
 import { useSelector } from "react-redux";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
+import { GiForkKnifeSpoon } from "react-icons/gi";
+
 
 const Home =() =>{
   const navigate = useNavigate();
@@ -315,18 +317,18 @@ const subtotal = getCartSubtotal()
         <div>
           {FillContent}
            <Header  scrollToRoomSectionEvent={scrollToRoomSectionEvent}   />
-           <div className="relative bg-cover bg-center h-[650px]" style={{ 
-                backgroundImage: `url(https://grupo-hoteles.com/storage/app/10/rooms/283422645-48-rooms-slider-1-Habitacion-Superior-Hotel-en-Medellin-appartments.webp)`,}}>
-              <div className="absolute inset-0 "></div>
-              <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+           <div className="relative bg-cover bg-center  h-[650px]" style={{ 
+                backgroundImage: `url(https://github.com/rolandoto/image-pms/blob/main/Piscina.jpg?raw=true)`,}}>
+              <div className="absolute inset-0  bg-black opacity-30  "></div>
+              <div className="relative max-w-5xl m-auto z-10 flex flex-col items-initial justify-center h-full text-center text-white">
                   <h1 className="text-4xl md:text-6xl lg:text-6xl font-lora">
                     {loadingHotel ?"cargando " :hotel?.nombre}  
                   </h1>
                   <p className="mt-2 text-base md:text-xl lg:text-3xl font-lora font-normal">
                   Hotel en el centro de Medellín en armonía con la naturaleza
                   </p>
-                  <button className="mt-6 bg-[#004e45] text-white px-6 py-3 rounded-lg hover:bg-[#004e45]" onClick={scrollToRoomSection}>
-                      Ver habitaciones
+                  <button className="mt-6 border border-2 w-40 text-white px-6 py-3  " onClick={scrollToRoomSection}>
+                      Reservar
                   </button>
               </div>
           </div>
@@ -452,7 +454,61 @@ const subtotal = getCartSubtotal()
           <div ref={roomSectionRef} >   
             <RoomDetail ref={roomSectionRef}  rooms={rooms} />
           </div>
+          
+          <div className="p-8 ">
+          <div className=" max-w-7xl rounded-3xl m-auto p-6 bg-[#004E45] mb-8">
+              <div className="flex justify-center" >
+                <div className=" bg-white  h-12 rounded-full p-2 mr-4">
+                  <GiForkKnifeSpoon color="#004E45" fontSize={30}  />
+                </div>
+                <div>
+                    <h2 className="text-2xl font-lora text-white items-center">
+                    Horarios de restaurante
+                  </h2>
+                  <p className="text-sm text-white font-lora">(La alimentación incluye menú a veganos y/o alérgicos)</p>
+                </div>
+            </div>
+          </div>
+
+          <div className="flex justify-center space-x-8">
+            <img
+              src="https://github.com/rolandoto/image-pms/blob/main/icono-comida-pagina-web.png?raw=true"
+              alt="Comida 1"
+              className=" lg:w-40 w-16  lg:h-40 h-16 rounded-lg  object-cover"
+            />
+            <img
+              src="https://github.com/rolandoto/image-pms/blob/main/icono-comida-pagina-web.png?raw=true"
+              alt="Comida 2"
+              className="lg:w-40 w-16 lg:h-40 h-16 rounded-lg  object-cover"
+            />
+            <img
+              src="https://github.com/rolandoto/image-pms/blob/main/icono-comida-pagina-web.png?raw=true"
+              alt="Comida 3"
+              className="lg:w-40  w-16 lg:h-40 h-16 rounded-lg  object-cover"
+            />
+          </div>
+        </div>
       
+      <div className="max-w-7xl m-auto">
+              <div className="lg:flex lg:p-0 p-8 block justify-center lg:space-x-8 space-y-4 lg:space-y-0">
+            <img
+              src="https://github.com/rolandoto/image-pms/blob/main/IMG_1706-scaled-1-2048x1366.jpg?raw=true"
+              alt="Comida 1"
+              className="w-full lg:w-90 h-64 rounded-3xl shadow-full object-cover"
+            />
+            <img
+              src="https://github.com/rolandoto/image-pms/blob/main/Restaurante-Vaia3.jpg?raw=true"
+              alt="Comida 2"
+              className="w-full lg:w-90 h-64 rounded-3xl shadow-full object-cover"
+            />
+            <img
+              src="https://github.com/rolandoto/image-pms/blob/main/IMG_9788-1-scaled-1-2048x1366.jpg?raw=true"
+              alt="Comida 3"
+              className="w-full lg:w-90 h-64 rounded-3xl shadow-full object-cover"
+            />
+          </div>
+      </div>
+
           <div ref={roomEventsSectionRef} >
             <Events  />
           </div>

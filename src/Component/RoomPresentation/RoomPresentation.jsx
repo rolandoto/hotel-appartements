@@ -23,11 +23,11 @@ const RoomPresentaion =() =>{
                 </div>
                 <div className="md:w-1/2 p-4">
                 <img 
-                    src="https://grupo-hoteles.com/storage/app/10/rooms/823835062-47-rooms-slider-2-Habitacion-Familiar-Hotel-en-Medellin-appartments-slider-1.webp" 
+                    src="https://github.com/rolandoto/image-pms/blob/main/fachada%20(1).png?raw=true" 
                     alt="Reservation" 
                     width="600" 
                     height="400" 
-                    className="w-full rounded-lg shadow-lg" 
+                    className="w-full rounded-3xl  shadow-lg" 
                 />
                 </div>
                 </div>

@@ -9,7 +9,7 @@ const TitleWelcome  =() =>{
                <img
                     src="https://grupo-hoteles.com/storage/app/10/rooms/823835062-47-rooms-slider-2-Habitacion-Familiar-Hotel-en-Medellin-appartments-slider-1.webp"
                     alt="Room"
-                    className="w-full h-auto rounded-lg shadow-lg"
+                    className="w-full h-auto rounded-3xl shadow-lg"
                 />
                     </div>
                 <div className="md:w-1/2 p-4 items-center justify-center flex flex-col">
