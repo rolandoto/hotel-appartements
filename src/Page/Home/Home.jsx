@@ -370,7 +370,7 @@ const subtotal = getCartSubtotal()
                   rangeColors={["rgb(255 104 0 / 36%);"]}
                   minDate={new Date()}
                   onChange={handleSelect}
-                  editableDateInputs={true}
+                  editableDateInputs={false}
                   months={2}
                   dayContentRenderer={(date) => {
                     const className = getClassNameForDate(date);
@@ -385,7 +385,7 @@ const subtotal = getCartSubtotal()
                   moveRangeOnFirstSelection={false} // No mueve el rango en la primera selección
                   showSelectionPreview={false} // Muestra la selección previa
                   startDatePlaceholder="Early"
-                  showDateDisplay={true}
+                  showDateDisplay={false}
                   ranges={state}
                   direction="horizontal"
                   locale={esLocale}
@@ -403,7 +403,7 @@ const subtotal = getCartSubtotal()
                           rangeColors={["rgb(255 104 0 / 36%);"]}
                           minDate={new Date()}
                           onChange={handleSelect}
-                          editableDateInputs={true}
+                          editableDateInputs={false}
                           months={monthsToShow}
                           dayContentRenderer={(date) => {
                             const className = getClassNameForDate(date);
@@ -418,7 +418,7 @@ const subtotal = getCartSubtotal()
                           moveRangeOnFirstSelection={false} // No mueve el rango en la primera selección
                           showSelectionPreview={false} // Muestra la selección previa
                           startDatePlaceholder="Early"
-                          showDateDisplay={true}
+                          showDateDisplay={false}
                           ranges={state}
                           direction="horizontal"
                           locale={esLocale}
@@ -534,14 +534,14 @@ const subtotal = getCartSubtotal()
 
       <div className="bg-gray-100 py-12">
           <div className=" max-w-7xl m-auto">
-            <h2 className="text-3xl font-semibold text-center mb-8">
+            <h2 className="text-3xl font-lora text-center mb-8">
               Lo que dicen nuestros clientes
             </h2>
             <div className="flex flex-col md:flex-row justify-between items-center  ">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="bg-white p-8 rounded-lg  text-center w-full max-w-xs"
+                  className="bg-white p-8 rounded-lg lg:mt-0 m-5 text-center w-full max-w-xs"
                 >
                   <img
                     className=" rounded-full mx-auto mb-4"
