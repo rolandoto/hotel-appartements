@@ -189,6 +189,28 @@ const subtotal = getCartSubtotal()
       setContextShowMenuPeople(false)
     }             
 
+
+    const testimonials = [
+      {
+        name: 'Monika Aguilar',
+        image: 'https://github.com/rolandoto/image-pms/blob/main/unnamed%20(3).png?raw=true', // Replace with actual image URL
+        feedback: 'El hotel es muy lindo, habitaciones tal como las fotos el servicio muy amable',
+      },
+      {
+        name: 'Marisol Andrea Arenas Gonzalez',
+        image: 'https://github.com/rolandoto/image-pms/blob/main/unnamed%20(4).png?raw=true', // Replace with actual image URL
+        feedback: 'Habitaciones cómodas, excelente servio del personal siempre están dispuestos a colaborar en lo que más se necesite',
+      },
+      {
+        name: 'Luisa Fernanda Padilla Ciro',
+        image: 'https://github.com/rolandoto/image-pms/blob/main/unnamed%20(5).png?raw=true', // Replace with actual image URL
+        feedback: 'Excelente lugar para descansar, tiene lindas vistas, personal altamente calificado a el servicio , habitaciones limpias y cómodas , excelente espacio para ir a pasar un rato agradable',
+      },
+    ];
+    
+    
+
+
     const faqs = [
       {
         question: '¿Cuáles son los sitios turísticos de la ciudad y si están cerca al hotel?',
@@ -320,11 +342,11 @@ const subtotal = getCartSubtotal()
            <div className="relative bg-cover bg-center  h-[650px]" style={{ 
                 backgroundImage: `url(https://github.com/rolandoto/image-pms/blob/main/Piscina.jpg?raw=true)`,}}>
               <div className="absolute inset-0  bg-black opacity-30  "></div>
-              <div className="relative max-w-5xl m-auto z-10 flex flex-col items-initial justify-center h-full text-center text-white">
-                  <h1 className="text-4xl md:text-6xl lg:text-6xl font-lora">
+              <div className="relative  max-w-5xl m-auto z-10 flex flex-col items-initial justify-center h-full text-center text-white">
+                  <h1 className="text-4xl text-left md:text-6xl lg:text-6xl font-lora">
                     {loadingHotel ?"cargando " :hotel?.nombre}  
                   </h1>
-                  <p className="mt-2 text-base md:text-xl lg:text-3xl font-lora font-normal">
+                  <p className="mt-2 text-left text-base md:text-xl lg:text-3xl font-lora font-normal">
                   Hotel en el centro de Medellín en armonía con la naturaleza
                   </p>
                   <button className="mt-6 border border-2 w-40 text-white px-6 py-3  " onClick={scrollToRoomSection}>
@@ -509,6 +531,31 @@ const subtotal = getCartSubtotal()
           </div>
       </div>
 
+
+      <div className="bg-gray-100 py-12">
+          <div className=" max-w-7xl m-auto">
+            <h2 className="text-3xl font-semibold text-center mb-8">
+              Lo que dicen nuestros clientes
+            </h2>
+            <div className="flex flex-col md:flex-row justify-between items-center  ">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-8 rounded-lg  text-center w-full max-w-xs"
+                >
+                  <img
+                    className=" rounded-full mx-auto mb-4"
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                  />
+                  <p className="text-gray-600 mb-4">{testimonial.feedback}</p>
+                  <p className="font-semibold text-gray-800">{testimonial.name}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
           <div ref={roomEventsSectionRef} >
             <Events  />
           </div>
@@ -516,7 +563,7 @@ const subtotal = getCartSubtotal()
           {subtotal >0 &&<Cart    
                           /> } 
 
-          <AccordionAsk faqs={faqs} />
+        {/**<AccordionAsk faqs={faqs} />   */}  
           <Footer />
     
           </div>
