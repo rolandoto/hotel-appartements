@@ -11,6 +11,9 @@ const Events =()  =>{
     const fetchDate =async() =>{
         await getEvents({id:10})
     }
+    
+
+
 
     useEffect(() =>{
         fetchDate()
