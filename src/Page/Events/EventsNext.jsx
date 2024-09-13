@@ -17,8 +17,7 @@ const EventsNext =()  =>{
     return (<>
              <Header/>
 
-               {subtotal >0 &&<Cart    
-                            /> } 
+               {subtotal >0 &&<Cart /> } 
                <div className="relative bg-cover bg-center h-[410px]" style={{ 
                 backgroundImage: `url(https://grupo-hoteles.com/storage/app/10/rooms/283422645-48-rooms-slider-1-Habitacion-Superior-Hotel-en-Medellin-appartments.webp)`,}}>
                     <div className="absolute inset-0 "></div>

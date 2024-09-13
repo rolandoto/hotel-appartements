@@ -5,6 +5,7 @@ import Footer from "../../Component/Footer/Footer";
 import { useSelector } from "react-redux";
 import UseEventsActions from "../../Actions/useEventsActions";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
+import Usetitle from "../../Hooks/UseTitle";
 
 const DetailEvents =() =>{
 
@@ -12,6 +13,8 @@ const DetailEvents =() =>{
         // Scrolls to the top of the document on component mount
         window.scrollTo(0, 0);
     }, []);
+
+
 
     let { userId } = useParams();
 
@@ -21,13 +24,15 @@ const DetailEvents =() =>{
       const fetchDate =async() =>{
           await getEventsDetail({id:userId})
       }
-      
-
 
       useEffect(() =>{
           fetchDate()
       },[])
  
+
+    Usetitle({title:geteventsDetail.Name})
+
+
    const FillContent =() =>{
     if(loadinggetEventsDetail){
         return <p>...cargando</p>
@@ -39,14 +44,14 @@ const DetailEvents =() =>{
 
     return <>
     <div className="mx-auto max-w-4xl p-6 mb-24">
-            <h1 className="text-[30px] text-center text-green-500  font-lora  mb-6">{geteventsDetail.Name}</h1>
+            <h1 className="text-[30px] text-center text-[#004E45]   font-lora  mb-6">{geteventsDetail.Name}</h1>
                 <div className=" w-full p-4">
                     <img
                             src={geteventsDetail.img_events}
                             alt="Room"
                             className="w-full h-[500px] object-center rounded-lg shadow-lg" />
                 </div>
-                <span className="text-2xl font-lora text-black mb-4" >{geteventsDetail.Place}: </span>
+                <span className="text-2xl font-lora text-black mb-4 " >{geteventsDetail.Place}: </span>
               
                 <div className=" md:pl-6 mt-12 md:mt-6">
                     <div  className="mt-4" dangerouslySetInnerHTML={{__html: geteventsDetail.Description}} >
@@ -56,6 +61,10 @@ const DetailEvents =() =>{
         </div>
     </>
     }
+
+
+    
+
     return (<>
                <Header/>
                <div className="relative bg-cover bg-center h-[410px]" style={{ backgroundImage: `url(https://github.com/rolandoto/image-pms/blob/main/_MG_4223.jpg?raw=true)`,}}>

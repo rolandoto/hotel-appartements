@@ -16,6 +16,7 @@ import Footer from '../../Component/Footer/Footer';
 import ConfirmationMessage from '../../Component/ConfirmationMessage/ConfirmationMessage';
 import WhatsappButton from '../../Component/WhatsappButton/WhatsappButton';
 import { Environment } from '../../Config/Config';
+import Usetitle from '../../Hooks/UseTitle';
 
 const Checkout  =() =>{
     useFetchData();
@@ -34,6 +35,8 @@ const Checkout  =() =>{
     const cardNumberArray = formValues.cardNumber.split(" ");
     const cardNumberString = cardNumberArray.join("");
     const now = moment().format('YYYY-MM-DD HH:mm:ss');
+
+
 
     const validate = useValidation();
 
