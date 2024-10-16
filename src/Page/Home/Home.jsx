@@ -25,7 +25,6 @@ import UseHotelActions from "../../Actions/useHotelsActions";
 import { useSelector } from "react-redux";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
 import { GiForkKnifeSpoon } from "react-icons/gi";
-import menu  from "../../Image/manuQR.pdf"
 
 const Home =() =>{
   const navigate = useNavigate();
