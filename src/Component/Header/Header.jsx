@@ -10,8 +10,8 @@ const Header =({scrollToRoomSectionEvent}) =>{
     };
 
     return (
-            <nav className=" w-full z-40 items-center fixed p-3 bg-gray-100 shadow-md">
-                    <div  className="  mx-auto flex items-center   justify-between   max-w-7xl" > 
+            <nav className="  w-full z-40 items-center fixed p-3 lg:bg-gray-100  bg-gray-0  shadow-md">
+                    <div  className="lg:flex hidden    mx-auto  items-center   justify-between   max-w-7xl" > 
                     <div className="text-3xl font-bold text-indigo-600">
                     <Link to="/">
                         <img 

@@ -1,6 +1,6 @@
 import React from "react"
 import {Button} from "@nextui-org/react";
-import pdf from "../../Image/contracto.pdf"
+import pdf from "../../Image/APPARTMENTS.pdf"
 const FormValues =({handleSubmit,formErrors,handleChange,formValues,loading,Country})  =>{
 
     return (<form onSubmit={handleSubmit}>

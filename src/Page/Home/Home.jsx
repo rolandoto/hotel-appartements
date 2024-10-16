@@ -25,7 +25,7 @@ import UseHotelActions from "../../Actions/useHotelsActions";
 import { useSelector } from "react-redux";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
 import { GiForkKnifeSpoon } from "react-icons/gi";
-
+import menu  from "../../Image/manuQR.pdf"
 
 const Home =() =>{
   const navigate = useNavigate();
@@ -342,19 +342,22 @@ const subtotal = getCartSubtotal()
            <div className="relative bg-cover bg-center  h-[650px]" style={{ 
                 backgroundImage: `url(https://github.com/rolandoto/image-pms/blob/main/Piscina.jpg?raw=true)`,}}>
               <div className="absolute inset-0  bg-black opacity-30  "></div>
-              <div className="relative  max-w-5xl m-auto z-10 flex flex-col items-initial justify-center h-full text-center text-white">
-                  <h1 className="text-4xl text-left md:text-6xl lg:text-6xl font-lora">
+              <div className="relative lg:p-4 p-4 text-center max-w-5xl m-auto z-10 flex flex-col items-initial justify-center h-full  text-white">
+                  <h1 className="text-4xl text-center text-left md:text-6xl lg:text-6xl font-lora">
                     {loadingHotel ?"cargando " :hotel?.nombre}  
                   </h1>
-                  <p className="mt-2 text-left text-base md:text-xl lg:text-3xl font-lora font-normal">
+                  <p className="mt-2  text-center text-base md:text-xl lg:text-3xl font-lora font-normal">
                   Hotel en el centro de Medellín en armonía con la naturaleza
                   </p>
-                  <button className="mt-6 border border-2 w-40 text-white px-6 py-3  " onClick={scrollToRoomSection}>
-                      Reservar
-                  </button>
+                  <div className="w-full flex justify-center" >
+                      <button className="mt-6 text-center border border-2 w-40 text-white px-6 py-3  " onClick={scrollToRoomSection}>
+                          Reservar
+                      </button>
+                  </div>
               </div>
           </div>
 
+          {subtotal >0 &&<Cart    /> } 
             <CalenderSearchHome HandClickMenuPeople={HandClickMenuPeople} 
                                  formattedStartDateToString={formattedStartDateToString}
                                  formattedEndDateToString={formattedEndDateToString}
@@ -426,7 +429,7 @@ const subtotal = getCartSubtotal()
                      
                     </div>
                     <button
-                      className="mt-6 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-400"
+                      className="mt-6 bg-[#004E45] text-white px-6 py-3 rounded-lg hover:bg-green-400"
                       onClick={(e) => setContextMenuPosition(false) }
                       style={{
                         position: 'absolute',
@@ -492,39 +495,23 @@ const subtotal = getCartSubtotal()
             </div>
           </div>
 
-          <div className="flex justify-center space-x-8">
-            <img
-              src="https://github.com/rolandoto/image-pms/blob/main/icono-comida-pagina-web.png?raw=true"
-              alt="Comida 1"
-              className=" lg:w-40 w-16  lg:h-40 h-16 rounded-lg  object-cover"
-            />
-            <img
-              src="https://github.com/rolandoto/image-pms/blob/main/icono-comida-pagina-web.png?raw=true"
-              alt="Comida 2"
-              className="lg:w-40 w-16 lg:h-40 h-16 rounded-lg  object-cover"
-            />
-            <img
-              src="https://github.com/rolandoto/image-pms/blob/main/icono-comida-pagina-web.png?raw=true"
-              alt="Comida 3"
-              className="lg:w-40  w-16 lg:h-40 h-16 rounded-lg  object-cover"
-            />
-          </div>
+         
         </div>
       
       <div className="max-w-7xl m-auto">
               <div className="lg:flex lg:p-0 p-8 block justify-center lg:space-x-8 space-y-4 lg:space-y-0">
             <img
-              src="https://github.com/rolandoto/image-pms/blob/main/IMG_1706-scaled-1-2048x1366.jpg?raw=true"
+              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-10-16%20093949.jpg?raw=true"
               alt="Comida 1"
               className="w-full lg:w-90 h-64 rounded-3xl shadow-full object-cover"
             />
             <img
-              src="https://github.com/rolandoto/image-pms/blob/main/Restaurante-Vaia3.jpg?raw=true"
+              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-10-16%20094012.jpg?raw=true"
               alt="Comida 2"
               className="w-full lg:w-90 h-64 rounded-3xl shadow-full object-cover"
             />
             <img
-              src="https://github.com/rolandoto/image-pms/blob/main/IMG_9788-1-scaled-1-2048x1366.jpg?raw=true"
+              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-10-16%20094040.jpg?raw=true"
               alt="Comida 3"
               className="w-full lg:w-90 h-64 rounded-3xl shadow-full object-cover"
             />
@@ -560,9 +547,7 @@ const subtotal = getCartSubtotal()
             <Events  />
           </div>
           <WhatsappButton />
-          {subtotal >0 &&<Cart    
-                          /> } 
-
+       
         {/**<AccordionAsk faqs={faqs} />   */}  
           <Footer />
     
