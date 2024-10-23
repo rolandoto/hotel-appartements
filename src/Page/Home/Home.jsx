@@ -247,13 +247,13 @@ const subtotal = getCartSubtotal()
 
     const rooms = [
       {  title: 'Room Estandar', price:139000 , image:"https://grupo-hoteles.com/storage/app/10/rooms/1174471989-45-rooms-slider-1-estandar4.jpeg", 
-          features:  ['Cama doble', 'Ventilador', 'Wi-Fi gratuito', 'Smart TV',"Cocina","Nevera"] },
+          features:  ['Cama doble', 'Wi-Fi', 'Smart TV',"Cocina","Nevera"] },
       { title: 'Room Superior ',price:159000, image: "https://grupo-hoteles.com/storage/app/10/rooms/283422645-48-rooms-slider-1-Habitacion-Superior-Hotel-en-Medellin-appartments.webp", 
-        features:[ "Aire acondicionado",'Cama doble', 'Ventilador', 'Wi-Fi gratuito', 'Smart TV'] },
+        features:[ "Aire acondicionado",'Cama doble', 'Wi-Fi', 'Smart TV'] },
       { title: 'Room Twin ',price:169000, image: "https://grupo-hoteles.com/storage/app/10/rooms/1470384104-46-rooms-slider-1-Habitacion-Twin-Hotel-en-Medellin-appartments.webp", 
-      features: ['Dos camas pequeñas', 'Wi-Fi gratuito', 'Smart TV',"Cocina","Nevera"] },
+      features: ['Dos camas pequeñas', 'Wi-Fi', 'Smart TV',"Cocina","Nevera"] },
       { title: 'Room Familiar ',price:269000, image: "https://grupo-hoteles.com/storage/app/10/rooms/578074716-47-rooms-slider-1-Habitacion-Familiar-Hotel-en-Medellin-appartments.webp", 
-      features:[ "Aire acondicionado",'Cama doble y una pequeña', 'Ventilador', 'Wi-Fi gratuito', 'Smart TV'] }
+      features:[ "Aire acondicionado",'Cama doble y una pequeña', 'Wi-Fi', 'Smart TV'] }
     ];
 
     const monthsToShow = window.innerWidth >= 700 ? 2 : 1; // Cambia 768 según tu punto de ruptura deseado
@@ -479,7 +479,7 @@ const subtotal = getCartSubtotal()
             <RoomDetail ref={roomSectionRef}  rooms={rooms} />
           </div>
           
-          <div className="p-8 ">
+          <div className="p-8 mt-10 ">
           <div className=" max-w-7xl rounded-3xl m-auto p-6 bg-[#004E45] mb-8">
               <div className="flex justify-center" >
                 <div className=" bg-white  h-12 rounded-full p-2 mr-4">
@@ -518,7 +518,7 @@ const subtotal = getCartSubtotal()
       </div>
 
 
-      <div className="bg-gray-100 py-12">
+      <div className="bg-gray-100 py-12 mt-28 ">
           <div className=" max-w-7xl m-auto">
             <h2 className="text-3xl font-lora text-center mb-8">
               Lo que dicen nuestros clientes

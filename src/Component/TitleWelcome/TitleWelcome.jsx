@@ -21,7 +21,7 @@ const TitleWelcome  =() =>{
                         height="100"
                         />
                 <p className="text-gray-700 text-justify	mt-4 mb-4">
-                Relájate en nuestros espacios diseñados pensando en tu comodidad. Hotel Apartments Medellín te ofrece todo lo que necesitas para disfrutar de una estancia inolvidable: habitaciones modernas y luminosas, una piscina infinita con vistas panorámicas a la ciudad, un coworking ideal para trabajar o estudiar, y un restaurante que deleitará tu paladar con los mejores sabores locales.
+                Ubicado en el centro de la ciudad de Medellín, nuestro hotel es el destino perfecto para quienes buscan una estancia de calidad en un ambiente moderno y acogedor. Ya sea que nos visites por turismo médico, en familia o para una estancia prolongada, te ofrecemos un espacio diseñado para tu confort. Disfruta de nuestra piscina de borde infinito con vistas impresionantes de la ciudad, una zona de coworking ideal para quienes necesitan trabajar mientras viajan, y una arquitectura que respeta y convive con la naturaleza. ¡Tu experiencia en la ciudad de la eterna primavera comienza aquí!
                 </p>
                 
                 </div>

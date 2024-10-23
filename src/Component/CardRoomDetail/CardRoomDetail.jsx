@@ -22,7 +22,7 @@ const CardRoomDetail =({features,image,title,price}) =>{
                     {features.map((feature, idx) => (
                         <li key={idx}>{feature}</li>
                     ))}
-                    <li >No incluye Inpuesto</li>
+                    <li >No incluye IVA</li>
                     </ul>        
                     <div className="PriceRoomDetail">
                         <div >
