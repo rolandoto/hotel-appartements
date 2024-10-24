@@ -25,6 +25,8 @@ import UseHotelActions from "../../Actions/useHotelsActions";
 import { useSelector } from "react-redux";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
 import { GiForkKnifeSpoon } from "react-icons/gi";
+import { FaHotel } from "react-icons/fa";
+import { FaClock } from "react-icons/fa6";
 
 const Home =() =>{
   const navigate = useNavigate();
@@ -474,6 +476,43 @@ const subtotal = getCartSubtotal()
              
           <TitleWelcome />
           <Features features={features} />
+
+          <div className="my-12 text-center mx-auto max-w-7xl">
+                    <div className=" lg:grid  grid-cols-3 p-6 md:p-6 md:grid-cols-3 gap-6">
+                        <div className=" items-start   rounded-lg flex  contents flex-col justify-between  ">
+                                <div className="bg-[#004E45]  lg:mt-0   mt-3 p-6 flex  items-center rounded-lg shadow-md ">
+                             
+                                    <div className=" flex-col flex items-start ">
+                                        <h2 className="text-lg text-center font-lora text-white">Cuidado y comodidad durante tu recuperación</h2>
+                                        <ul className="text-justify  space-y-1 text-white">
+                                                <li>Si vienes a Medellín por motivos de turismo médico, nuestro hotel es la elección ideal. Estamos cerca de las principales clínicas y centros de salud de la ciudad, y te ofrecemos un ambiente tranquilo y cómodo para tu recuperación. Además, nuestras instalaciones están diseñadas para proporcionar el descanso y la atención que necesitas durante tu proceso de recuperación.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div className="bg-[#004E45] lg:mt-0   mt-3 p-6 flex  items-center rounded-lg shadow-md ">
+                                    
+                                    <div className=" flex-col flex items-start ">
+                                        <h2 className="text-lg font-lora text-center text-white">Tu hogar en Medellín por más tiempo</h2>
+                                        <ul className="text-justify  space-y-1 text-white">
+                                                <li>Si planeas una estancia prolongada, nuestro hotel te ofrece todo lo que necesitas para sentirte como en casa. Con instalaciones diseñadas para hacer tu vida más cómoda, una ubicación ideal para explorar la ciudad, y servicios que cubren todas tus necesidades, seremos tu hogar lejos de casa durante todo el tiempo que necesites.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div className="bg-[#004E45] lg:mt-0  p-6   mt-3 flex  items-center rounded-lg shadow-md ">
+                                   
+                                    <div className=" flex-col flex items-start ">
+                                        <h2 className="text-lg font-lora text-center text-white">Ideal para familias</h2>
+                                        <ul className=" text-justify space-y-1 text-white">
+                                                <li>Nuestro hotel en el corazón de Medellín te ofrece pequeños apartamentos ideales para familias, equipados con cocina, nevera y todas las comodidades que necesitas para sentirte como en casa. Vive una experiencia inolvidable mientras exploras la ciudad, con el espacio y confort perfectos para tu estancia. ¡Tu hogar lejos de casa te espera!</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+            </div>
+
           <RoomPresentaion />
           <div ref={roomSectionRef} >   
             <RoomDetail ref={roomSectionRef}  rooms={rooms} />

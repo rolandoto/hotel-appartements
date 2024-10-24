@@ -7,9 +7,9 @@ const TitleWelcome  =() =>{
             <div className="flex flex-col  mt-[260px] lg:mt-24  mx-auto max-w-7xl  md:flex-row items-center my-12 p-4">
                <div className="md:w-1/2 p-4">
                <img
-                    src="https://grupo-hoteles.com/storage/app/10/rooms/823835062-47-rooms-slider-2-Habitacion-Familiar-Hotel-en-Medellin-appartments-slider-1.webp"
+                    src="https://github.com/rolandoto/image-pms/blob/main/_MG_0188%20(1).jpg?raw=true"
                     alt="Room"
-                    className="w-full h-auto rounded-3xl shadow-lg"
+                    className="w-full h-[700px] rounded-3xl shadow-lg"
                 />
                     </div>
                 <div className="md:w-1/2 p-4 items-center justify-center flex flex-col">
