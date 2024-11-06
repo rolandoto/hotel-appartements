@@ -20,7 +20,7 @@ export const ApiHotelByIdReduccers = createSlice({
         },
         setHotel:(state,action) =>{
             state.hotel = action.payload
-            state.loading= false
+            state.loading= null
         },
         setError:(state) =>{
             state.loading = false

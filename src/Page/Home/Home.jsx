@@ -64,6 +64,61 @@ const Home =() =>{
 
 const subtotal = getCartSubtotal()
 
+
+/**
+ * 
+ * <div className="max-w-6xl md:p-0 p-8 mx-auto py-8">
+     <h2 className=" text-left  md:text-[30px] text-[25px] text-blue-900  font-lora  mb-6">¿Buscas un lugar cómodo y seguro para tu viaje a Medellín? </h2>
+
+
+     <p class="text-[15px] text-left text-gray-700 leading-relaxed  mx-auto max-w-7xl">
+ Nuestro hotel en el centro de la ciudad es la opción ideal para turistas médicos, viajeros de larga estancia y familias. Ofrecemos habitaciones amplias, servicios personalizados y una ubicación estratégica cerca de todo lo que necesitas. ¡Disfruta de tu estancia en la ciudad de la eterna primavera!
+     </p>
+     <div className="relative mt-8 w-full max-w-6xl mx-auto overflow-hidden">
+     <div
+       className={`transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}
+     >
+       <img src={slides[currentSlide].image} alt={slides[currentSlide].title} className="w-full h-auto object-cover" />
+       <div className="  absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white px-4 text-center">
+         <div className="max-w-4xl mx-auto" >
+         <h2 className="text-2xl font-bold">{slides[currentSlide].title}</h2>
+         <p className="mt-2  md:text-[20px] text-[10px] ">{slides[currentSlide].description}</p>
+         </div>
+       
+       </div>
+     </div>
+
+
+     <button
+       onClick={handlePrev}
+       className="absolute left-4 top-1/2 text-[70px] transform -translate-y-1/2  text-white p-2 rounded-full "
+     >
+       &#8249;
+     </button>
+     <button
+       onClick={handleNext}
+       className="absolute right-4 top-1/2  text-[70px] transform -translate-y-1/2  text-white p-2 rounded-full "
+     >
+       &#8250;
+     </button>
+     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+       {slides.map((_, idx) => (
+         <span
+           key={idx}
+           onClick={() => setCurrentSlide(idx)}
+           className={`block w-2 h-2 rounded-full ${
+             idx === currentSlide ? 'bg-white' : 'bg-gray-400'
+           } cursor-pointer`}
+         />
+       ))}
+     </div>
+   </div>
+   </div>
+      
+
+ * 
+ */
+
   const reviews = [
 
     {
@@ -110,16 +165,13 @@ const subtotal = getCartSubtotal()
   ];
   
   const features = [
-      { icon: <IconsFaGlassMartini />, title: 'Cóctel de bienvenida' },
-      { icon: <IconsGiForkKnifeSpoon/>, title: 'Desayuno incluido' },
-      { icon: <IconsFaConciergeBell/>, title: 'Recepción 24 horas' },
-      { icon: <IconsaCar/>, title: 'Variedad de transporte', description: 'Metro, tranvía, autobús, taxi' },
-      { icon: <IconsRiBankFill/>, title: 'Vida cultural y nocturna', description: 'Bares, museos, restaurantes' },
-      { icon: <IconsFaSquareParking/>, title: 'Parqueadero gratis*', description: 'Sujeto a disponibilidad' },
-      { icon: <IconsGiForkKnifeSpoon/>, title: 'Restaurante - Bar  ', description: ' con vista panorámica' },
-      { icon: <IconsFaStore/>, title: 'Alianzas comerciales', description: 'Servicio de taxi, gimnasio, tours, médico, comunicaciones.' },
-      { icon: <IconsFaBanSmoking/>, title: 'Espacios libre de humo', description: "" },
-    ];
+    { icon: <IconsFaGlassMartini/>, title: 'Cóctel de bienvenida' },
+    { icon: <IconsGiForkKnifeSpoon/>, title: 'Desayuno incluido' },
+    { icon: <IconsFaConciergeBell/>, title: 'Recepción 24 horas' },
+    { icon: <IconsaCar/>, title: 'Variedad de transporte', description: 'Metro, tranvía, autobús, taxi' },
+    { icon: <IconsGiForkKnifeSpoon/>, title: 'Restaurante - Bar  ', description: ' con vista panorámica' },
+    { icon: <IconsFaStore/>, title: 'Alianzas comerciales', description: 'Servicio de taxi, gimnasio, tours, médico, comunicaciones.' }
+  ];
 
       const roomSectionRef = useRef(null);
       const roomEventsSectionRef = useRef(null);
@@ -191,6 +243,26 @@ const subtotal = getCartSubtotal()
     }             
 
 
+    const hotelReferid = [
+      {
+        description: "Viaje de Negocios",
+        image: 'https://github.com/rolandoto/image-pms/blob/main/Logos/47street.jpg?raw=true', // Replace with actual image URL
+        url: 'https://47medellinstreethotel.com/',
+      
+      },
+      {
+        description: "Viaje romántico en pareja",
+        image: 'https://github.com/rolandoto/image-pms/blob/main/MG_8648-scaled.jpg?raw=true', // Replace with actual image URL
+        url: 'https://galleryhotel.co/',
+      },
+      {
+        description: "Viaje Turismo de Salud",
+        image: 'https://github.com/rolandoto/image-pms/blob/main/_MG_0188%20(1).jpg?raw=true', // Replace with actual image URL
+        url: 'https://appartments.com.co/',
+      }
+    ];
+  
+
     const testimonials = [
       {
         name: 'Monika Aguilar',
@@ -209,7 +281,8 @@ const subtotal = getCartSubtotal()
       },
     ];
     
-    
+
+  
 
 
     const faqs = [
@@ -248,14 +321,14 @@ const subtotal = getCartSubtotal()
     ];
 
     const rooms = [
-      {  title: 'Room Estandar', price:139000 , image:"https://grupo-hoteles.com/storage/app/10/rooms/1174471989-45-rooms-slider-1-estandar4.jpeg", 
-          features:  ['Cama doble', 'Wi-Fi', 'Smart TV',"Cocina","Nevera"] },
-      { title: 'Room Superior ',price:159000, image: "https://grupo-hoteles.com/storage/app/10/rooms/283422645-48-rooms-slider-1-Habitacion-Superior-Hotel-en-Medellin-appartments.webp", 
-        features:[ "Aire acondicionado",'Cama doble', 'Wi-Fi', 'Smart TV'] },
-      { title: 'Room Twin ',price:169000, image: "https://grupo-hoteles.com/storage/app/10/rooms/1470384104-46-rooms-slider-1-Habitacion-Twin-Hotel-en-Medellin-appartments.webp", 
-      features: ['Dos camas pequeñas', 'Wi-Fi', 'Smart TV',"Cocina","Nevera"] },
-      { title: 'Room Familiar ',price:269000, image: "https://grupo-hoteles.com/storage/app/10/rooms/578074716-47-rooms-slider-1-Habitacion-Familiar-Hotel-en-Medellin-appartments.webp", 
-      features:[ "Aire acondicionado",'Cama doble y una pequeña', 'Wi-Fi', 'Smart TV'] }
+      {  title: 'Room Estandar', price:120000 , image:"https://grupo-hoteles.com/storage/app/10/rooms/1174471989-45-rooms-slider-1-estandar4.jpeg", 
+          features:  ["Smart TV","Wi-Fi","Microondas","Escritorio","Wi-Fi","Cocina"] },
+      { title: 'Room Superior ',price:130000, image: "https://grupo-hoteles.com/storage/app/10/rooms/283422645-48-rooms-slider-1-Habitacion-Superior-Hotel-en-Medellin-appartments.webp", 
+        features:['Smart TV',"Wi-Fi","Aire acondicionado","Cocina" ] },
+      { title: 'Room Twin',price:142000, image: "https://grupo-hoteles.com/storage/app/10/rooms/1470384104-46-rooms-slider-1-Habitacion-Twin-Hotel-en-Medellin-appartments.webp", 
+      features: ['Smart TV', 'Wi-Fi',"Cocina"] },
+      { title: 'Room Familiar ',price:230000, image: "https://grupo-hoteles.com/storage/app/10/rooms/578074716-47-rooms-slider-1-Habitacion-Familiar-Hotel-en-Medellin-appartments.webp", 
+      features:['Wi-Fi', 'Smart TV',"Ventiladores de Techo","Cocina"] }
     ];
 
     const monthsToShow = window.innerWidth >= 700 ? 2 : 1; // Cambia 768 según tu punto de ruptura deseado
@@ -335,6 +408,72 @@ const subtotal = getCartSubtotal()
 
      * 
      */
+
+
+
+          const [currentSlide, setCurrentSlide] = useState(0);
+const [fade, setFade] = useState(true); // Estado para manejar la opacidad
+
+const handlePrev = () => {
+  setFade(false); // Inicia el efecto de desvanecimiento
+  setTimeout(() => {
+    setCurrentSlide((prevSlide) => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
+    setFade(true); // Restaura la opacidad después de cambiar el slide
+  }, 500); // Espera 500ms antes de cambiar el slide para completar el fade-out
+};
+
+const handleNext = () => {
+  setFade(false); // Inicia el efecto de desvanecimiento
+  setTimeout(() => {
+    setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
+    setFade(true); // Restaura la opacidad después de cambiar el slide
+  }, 500); // Espera 500ms antes de cambiar el slide para completar el fade-out
+};
+ const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
+
+
+
+
+ const slides = [
+  {
+    title: 'Viaje en familia',
+    description: "Nuestro hotel en el corazón de Medellín te ofrece pequeños apartamentos ideales para familias, equipados con cocina, nevera y todas las comodidades que necesitas para sentirte como en casa. ",
+    description1:" Vive una experiencia inolvidable mientras exploras la ciudad, con el espacio y confort perfectos para tu estancia. ¡Tu hogar lejos de casa te espera!",
+    image: 'https://github.com/rolandoto/image-pms/blob/main/Dueto/Familia-viajera.jpg?raw=true',
+  },
+  {
+    title: 'Turismo Médico',
+    description: 'Si vienes a Medellín por motivos de turismo médico, nuestro hotel es la elección ideal. Estamos cerca de las principales clínicas y centros de salud de la ciudad, y te ofrecemos un ambiente tranquilo y cómodo para tu recuperación. ',
+    description1:" Además, nuestras instalaciones están diseñadas para proporcionar el descanso y la atención que necesitas durante tu proceso de recuperación    ",
+    image: 'https://github.com/rolandoto/image-pms/blob/main/Dueto/Turis-Medico.jpg?raw=true',
+  },
+  {
+    title: 'Viajes de larga duración    ',
+    description: 'Si planeas una estancia prolongada, nuestro hotel te ofrece todo lo que necesitas para sentirte como en casa. ',
+    description1:"Con instalaciones diseñadas para hacer tu vida más cómoda, una ubicación ideal para explorar la ciudad, y servicios que cubren todas tus necesidades, seremos tu hogar lejos de casa durante todo el tiempo que necesites.    ",
+    image: 'https://github.com/rolandoto/image-pms/blob/main/Dueto/Viejo-F.jpg?raw=true',
+  },
+  // Add more slides as needed
+];
+
+const [currentIndex, setCurrentIndex] = useState(0);
+
+  // función para avanzar
+  const nextSlide = () => {
+    if (currentIndex < rooms.length - 2) {
+      setCurrentIndex((prevIndex) => prevIndex + 1);
+    }
+  };
+
+  // función para retroceder
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex((prevIndex) => prevIndex - 1);
+    }
+  };
 
     return (
         <div>
@@ -477,42 +616,6 @@ const subtotal = getCartSubtotal()
           <TitleWelcome />
           <Features features={features} />
 
-          <div className="my-12 text-center mx-auto max-w-7xl">
-                    <div className=" lg:grid  grid-cols-3 p-6 md:p-6 md:grid-cols-3 gap-6">
-                        <div className=" items-start   rounded-lg flex  contents flex-col justify-between  ">
-                                <div className="bg-[#004E45]  lg:mt-0   mt-3 p-6 flex  items-center rounded-lg shadow-md ">
-                             
-                                    <div className=" flex-col flex items-start ">
-                                        <h2 className="text-lg text-center font-lora text-white">Cuidado y comodidad durante tu recuperación</h2>
-                                        <ul className="text-justify  space-y-1 text-white">
-                                                <li>Si vienes a Medellín por motivos de turismo médico, nuestro hotel es la elección ideal. Estamos cerca de las principales clínicas y centros de salud de la ciudad, y te ofrecemos un ambiente tranquilo y cómodo para tu recuperación. Además, nuestras instalaciones están diseñadas para proporcionar el descanso y la atención que necesitas durante tu proceso de recuperación.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div className="bg-[#004E45] lg:mt-0   mt-3 p-6 flex  items-center rounded-lg shadow-md ">
-                                    
-                                    <div className=" flex-col flex items-start ">
-                                        <h2 className="text-lg font-lora text-center text-white">Tu hogar en Medellín por más tiempo</h2>
-                                        <ul className="text-justify  space-y-1 text-white">
-                                                <li>Si planeas una estancia prolongada, nuestro hotel te ofrece todo lo que necesitas para sentirte como en casa. Con instalaciones diseñadas para hacer tu vida más cómoda, una ubicación ideal para explorar la ciudad, y servicios que cubren todas tus necesidades, seremos tu hogar lejos de casa durante todo el tiempo que necesites.</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div className="bg-[#004E45] lg:mt-0  p-6   mt-3 flex  items-center rounded-lg shadow-md ">
-                                   
-                                    <div className=" flex-col flex items-start ">
-                                        <h2 className="text-lg font-lora text-center text-white">Ideal para familias</h2>
-                                        <ul className=" text-justify space-y-1 text-white">
-                                                <li>Nuestro hotel en el corazón de Medellín te ofrece pequeños apartamentos ideales para familias, equipados con cocina, nevera y todas las comodidades que necesitas para sentirte como en casa. Vive una experiencia inolvidable mientras exploras la ciudad, con el espacio y confort perfectos para tu estancia. ¡Tu hogar lejos de casa te espera!</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                        </div>
-                    </div>
-            </div>
-
           <RoomPresentaion />
           <div ref={roomSectionRef} >   
             <RoomDetail ref={roomSectionRef}  rooms={rooms} />
@@ -526,7 +629,7 @@ const subtotal = getCartSubtotal()
                 </div>
                 <div>
                     <h2 className="text-2xl font-lora text-white items-center">
-                    Horarios de restaurante
+                    rooftop
                   </h2>
                   <p className="text-sm text-white font-lora">(La alimentación incluye menú a veganos y/o alérgicos)</p>
                 </div>
@@ -536,28 +639,30 @@ const subtotal = getCartSubtotal()
          
         </div>
       
-      <div className="max-w-7xl m-auto">
-              <div className="lg:flex lg:p-0 p-8 block justify-center lg:space-x-8 space-y-4 lg:space-y-0">
+        <div className="max-w-7xl m-auto">
+          <div className="lg:flex lg:p-0 p-8 block justify-between lg:space-x-8 space-y-4 lg:space-y-0">
             <img
-              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-10-16%20093949.jpg?raw=true"
+              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-11-06%20a%20la(s)%201.38.31%20p.m..png?raw=true"
               alt="Comida 1"
-              className="w-full lg:w-90 h-64 rounded-3xl shadow-full object-cover"
+              className="w-full lg:w-72 h-64 rounded-[30px] shadow-full "
             />
             <img
-              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-10-16%20094012.jpg?raw=true"
+              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-11-06%20a%20la(s)%201.27.57%20p.m..png?raw=true"
               alt="Comida 2"
-              className="w-full lg:w-90 h-64 rounded-3xl shadow-full object-cover"
+              className="w-full lg:w-72 h-64 rounded-[30px] shadow-full "
             />
             <img
-              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-10-16%20094040.jpg?raw=true"
+              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-11-06%20a%20la(s)%201.27.39%20p.m..png?raw=true"
               alt="Comida 3"
-              className="w-full lg:w-90 h-64 rounded-3xl shadow-full object-cover"
+              className="w-full lg:w-72 h-64 rounded-[30px] shadow-full "
             />
           </div>
       </div>
 
 
-      <div className="bg-gray-100 py-12 mt-28 ">
+
+
+      <div className="bg-gray-100 py-12 mt-72 ">
           <div className=" max-w-7xl m-auto">
             <h2 className="text-3xl font-lora text-center mb-8">
               Lo que dicen nuestros clientes
@@ -586,8 +691,102 @@ const subtotal = getCartSubtotal()
           </div>
           <WhatsappButton />
        
+          
+         
+    <div
+      className="relative h-[950px] bg-cover bg-center"
+      style={{ backgroundImage: 'url("https://github.com/rolandoto/image-pms/blob/main/Piscina.jpg?raw=true")' }}
+    >
+      <div className="absolute inset-0 bg-black opacity-60"></div>
+      
+      {/* Main Message */}
+      <div className="absolute  xl:top-1/4  top-0 text-white left-8 xl:left-16 max-w-lg">
+        <h1 className="text-4xl xl:text-6xl font-bold leading-tight">
+          ¡Queremos que tu estancia sea inolvidable!
+        </h1> 
+        <p className="mt-4 text-base xl:text-lg">
+          Por eso, te invitamos a descubrir otros rincones de la ciudad y a conocer nuevos lugares.
+        </p>
+        <p className="mt-2 text-base xl:text-lg">
+          ¡Consulta nuestras recomendaciones de hoteles para vivir una experiencia inolvidable!
+        </p>
+      </div>
+
+      {/* Image Cards */}
+      <div className="absolute  lg:top-1/4 top-[350px] left-0 right-8 flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-end space-y-4 xl:space-y-0 xl:space-x-4">
+        {hotelReferid.map((caption, index) => (
+          <a
+            target="_blank"
+            href={caption.url}
+            key={index}
+            className="relative w-48 h-32 xl:w-64 xl:h-48 cursor-pointer rounded overflow-hidden shadow-lg"
+          >
+            <img
+              src={caption.image}
+              alt={caption.description}
+              className="w-full h-fulls object-cover"
+            />
+            <div className="absolute bottom-0 bg-black bg-opacity-50 text-white text-[16px] md:text-[16px] p-2 w-full text-center">
+              {caption.description}
+            </div>
+          </a>
+        ))}
+      </div>
+
+    </div>
+
+
+    <div className="max-w-6xl mt-20   md:p-0 p-8 mx-auto py-8">
+     <h2 className=" text-left  md:text-[30px] text-[25px] text-[#004E45]  font-lora  mb-6">¿Buscas un lugar cómodo y seguro para tu viaje a Medellín? </h2>
+
+
+     <p class="text-[15px] text-left text-gray-700 leading-relaxed  mx-auto max-w-7xl">
+ Nuestro hotel en el centro de la ciudad es la opción ideal para turistas médicos, viajeros de larga estancia y familias. Ofrecemos habitaciones amplias, servicios personalizados y una ubicación estratégica cerca de todo lo que necesitas. ¡Disfruta de tu estancia en la ciudad de la eterna primavera!
+     </p>
+     <div className="relative mt-8 w-full max-w-6xl mx-auto overflow-hidden">
+     <div
+       className={`transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+       <img src={slides[currentSlide].image} alt={slides[currentSlide].title} className="w-full  bg-fixed	  h-[550px] object-cover" />
+       <div className="  absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center text-white px-4 text-center">
+         <div className="max-w-3xl mx-auto" >
+         <h2 className="  text-[35px] ">{slides[currentSlide].title}</h2>
+         <p className="mt-2 font-sans  md:text-[15px] text-[10px] ">{slides[currentSlide].description}</p>
+ 
+         <p className="mt-2 font-sans  md:text-[15px] text-[10px] ">{slides[currentSlide].description1}</p>
+         </div>
+       
+       </div>
+     </div>
+
+
+     <button
+       onClick={handlePrev}
+       className="absolute left-4 top-1/2 text-[70px] transform -translate-y-1/2  text-white p-2 rounded-full "
+     >
+       &#8249;
+     </button>
+     <button
+       onClick={handleNext}
+       className="absolute right-4 top-1/2  text-[70px] transform -translate-y-1/2  text-white p-2 rounded-full "
+     >
+       &#8250;
+     </button>
+     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+       {slides.map((_, idx) => (
+         <span
+           key={idx}
+           onClick={() => setCurrentSlide(idx)}
+           className={`block w-2 h-2 rounded-full ${
+             idx === currentSlide ? 'bg-white' : 'bg-gray-400'
+           } cursor-pointer`}
+         />
+       ))}
+     </div>
+   </div>
+   </div>
+
         {/**<AccordionAsk faqs={faqs} />   */}  
-          <Footer />
+          <Footer  PostHotelByIdHotel={PostHotelByIdHotel}  />
     
           </div>
     )

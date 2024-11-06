@@ -1,7 +1,7 @@
 import React from "react"
 import {  IconFaFacebookF, IconFaInstagram, IconFaMapMarkerAlt, IconFaWhatsapp, IconFaYoutube, IconsMdEmail } from "../Icons/Icons"
 import pdf from "../../Image/APPARTMENTS.pdf"
-const Footer =() =>{
+const Footer =({PostHotelByIdHotel}) =>{
 
     const handleFacebook = () => {
         window.open("https://www.facebook.com/apartments.med", "_blank");
@@ -14,7 +14,7 @@ const Footer =() =>{
     return (
             <footer className="bg-gray-100   text-black py-8">
                 <div className="mx-auto max-w-7xl p-4  flex flex-col md:flex-row justify-between items-start md:items-center">
-                <div className="flex">
+                <div className="block">
                     <img
                         src="https://github.com/rolandoto/image-pms/blob/main/Logo%20apartments%20.png?raw=true"
                         alt="Logo de Gallery Hotel" 
@@ -22,7 +22,14 @@ const Footer =() =>{
                         height="100"
                         className="w-48 mb-4"
                     />
+                      <button
+     onClick={PostHotelByIdHotel}
+     className="m-auto  w-full px-8 py-4 bg-[#004E45] text-white  transition-colors"
+   >
+     Reservar
+   </button>
                 </div>
+                
 
                 <div>
                     <div className="">
@@ -55,8 +62,9 @@ const Footer =() =>{
                 <div className="text-center border-t-1  mx-auto max-w-7xl  text-black mt-8">
                     <div className=" flex  flex-col sm:flex-row  justify-between mt-8 mx-auto max-w-7xl items-center">
                             <div>
-                                Copyright © 2024 – All Rights Reserved Hotel Apartments
+                            © Copyright. Todos los derechos reservados
                             </div>
+                          
                                     <div className=" ">
                                     <div className="flex space-x-4">
                                     <img 

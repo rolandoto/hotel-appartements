@@ -48,6 +48,10 @@ const Accommodation = () => {
     childrem ,
     getClassNameForDate} =  UseCalenderSearch()
 
+
+    console.log({"error":error})
+
+
     const {getCartSubtotal} = UseCart()
     const subtotal = getCartSubtotal()
     const [checkbox,setCheckBox] =useState(false)
@@ -131,12 +135,11 @@ const Accommodation = () => {
       FetchDate ()
     },[])
 
-    const PostHotelByIdHotel = useCallback(async () => {
+    const PostHotelByIdHotel = async() => {
       setContextMenuPosition(false);
       setContextShowMenuPeople(false)
       await getHotel({propertyID:Environment.propertyID,startDate:formattedStartDate, endDate: formattedEndDate,token:Environment.Token,counPeople:totalCountAdults });
-  }, [formattedStartDate,formattedEndDate,totalCountAdults]);
-
+    }
     useEffect(() =>{
       PostHotelByIdHotel()
     },[])
@@ -177,13 +180,13 @@ const Accommodation = () => {
       if(!formattedStartDate && !formattedEndDate){
         return   <EmpyCart title={" Busca tu reserva en el calendario."} />
       }
-      if(loading){
+      else if(loading){
        return  (
                 <div  className=" lg:flex    mx-auto   max-w-5xl items-center justify-between p-4 lg:px-8">
                 <LoadingSkeleton />
                 </div> 
        ) 
-      }if(error){
+      }else if(error){
         return     <EmpyCart title={"Lo sentimos, en este momento no contamos con alojamientos disponibles para las fechas seleccionadas. Por favor, modifique las fechas para generar una nueva búsqueda. O puede contactar a nuestro equipo para obtener más información llamando al +573017790117."} />
                 }
         return <>  {hotel?.data?.map((List,index) => <CardAccomodation  

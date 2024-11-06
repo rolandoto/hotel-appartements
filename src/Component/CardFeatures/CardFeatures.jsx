@@ -3,65 +3,13 @@ import React from "react";
 const CardFeatures =({icon,title,description}) =>{
 
     return (<div  className="bg-gray-100 p-6   rounded-lg  hover:bg-white  hover:shadow-lg  transition duration-150 ease-in-out">
-               <div className="flex justify-center space-x-8 p-8 bg-white">
-      {/* Columna Izquierda */}
-      <div className="flex space-x-8">
-        <div className="bg-beige rounded-lg p-6 shadow-md w-80">
-          <div className="flex items-center mb-4">
-            <div className="bg-white rounded-full p-2 mr-4">
-              <img src="/path-to-icon" alt="Icono de habitaciones" className="w-8 h-8" />
-            </div>
-            <h2 className="text-lg font-bold">Tipos de habitación</h2>
-          </div>
-          <ul className="space-y-2">
-            <li>Estandar (2 per)</li>
-            <li>Superior (2 per)</li>
-            <li>Twin (2 per)</li>
-            <li>Familiar (Max 4 por apto.)</li>
-          </ul>
-        </div>
-
-        <div className="bg-beige rounded-lg p-6 shadow-md w-80">
-          <div className="flex items-center mb-4">
-            <div className="bg-white rounded-full p-2 mr-4">
-              <img src="/path-to-icon" alt="Icono de servicios" className="w-8 h-8" />
-            </div>
-            <h2 className="text-lg font-bold">Servicios</h2>
-          </div>
-          <ul className="space-y-2">
-            <li>Piscina</li>
-            <li>Coworking</li>
-            <li>Restaurante</li>
-            <li>Sauna</li>
-          </ul>
-        </div>
-      </div>
-
-            {/* Columna Derecha */}
-            <div className="flex   flex-col space-y-4">
-                <div className="bg-green-800 text-white rounded-lg p-4 flex items-center space-x-4">
-                <div className="bg-white text-green-800 rounded-full p-2">
-                    <img src="/path-to-icon" alt="Check-in" className="w-6 h-6" />
+                <div className="flex items-center ">
+                    <div className="text-4xl mr-2 iconsFeature ">{icon}</div>
+                    <div> <h3 className="text-xl text-justify font-bold mb-2">{title}</h3>
+                    <div>
+                        {description && <p className="text-gray-700 text-justify">{description}</p>}
+                    </div></div>        
                 </div>
-                <div>
-                    <h3 className="text-lg font-bold">CHECK IN</h3>
-                    <p>A partir de las 3:00pm</p>
-                    <p className="text-sm">(early check in sujeto a disponibilidad)</p>
-                </div>
-                </div>
-
-                <div className="bg-green-800 text-white rounded-lg p-4 flex items-center space-x-4">
-                <div className="bg-white text-green-800 rounded-full p-2">
-                    <img src="/path-to-icon" alt="Check-out" className="w-6 h-6" />
-                </div>
-                <div>
-                    <h3 className="text-lg font-bold">CHECK OUT</h3>
-                    <p>Hasta la 1:00 pm</p>
-                    <p className="text-sm">(late check out sujeto a disponibilidad)</p>
-                </div>
-                </div>
-            </div>
-            </div>
             </div>)
 }
 
