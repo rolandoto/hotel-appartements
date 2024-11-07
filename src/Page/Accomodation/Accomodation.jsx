@@ -177,7 +177,7 @@ const Accommodation = () => {
 
   
     const FillContent =()=>{
-      if(!formattedStartDate && !formattedEndDate){
+      if(!hotel?.data){
         return   <EmpyCart title={" Busca tu reserva en el calendario."} />
       }
       else if(loading){

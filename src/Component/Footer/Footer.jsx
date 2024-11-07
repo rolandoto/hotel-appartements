@@ -43,14 +43,14 @@ const Footer =({PostHotelByIdHotel}) =>{
                     
                     <div className="w-[350px] lg:w-[280px] lg:w-122 " >
                             <div className="flex justify-center space-x-4 mt-4">
-                                <IconFaInstagram   onclick={handleInstagram} />
+                                <IconFaInstagram     onclick={handleInstagram} />
                                 <IconFaFacebookF  onclick={handleFacebook} />
                             </div>
                     </div>
                 </div>
                
                 <div className=" ">
-                    <div class="bg-gray-100 text-black flex items-center justify-center ">
+                    <div class="bg-gray-100 text-black flex items-center justify-between ">
                         <div class="w-full max-w-md mt-6">
                             <h2 class="text-center text-xl font-semibold mb-6">Navegación</h2>
                             <a target="_blank" href={pdf} className="text-black"> Términos y Condiciones del sitio web</a>.
@@ -62,7 +62,7 @@ const Footer =({PostHotelByIdHotel}) =>{
                 <div className="text-center border-t-1  mx-auto max-w-7xl  text-black mt-8">
                     <div className=" flex  flex-col sm:flex-row  justify-between mt-8 mx-auto max-w-7xl items-center">
                             <div>
-                            © Copyright. Todos los derechos reservados
+                            © Copyright. Todos los derechos reservados.
                             </div>
                           
                                     <div className=" ">

@@ -207,12 +207,10 @@ const subtotal = getCartSubtotal()
 
     const formattedEndDateToString = moment(state?.[0]?.endDate ?? '').format('DD MMM YYYY').toLowerCase();
     
-
     const PostHotelByIdHotel = useCallback(async () => {
       setContextMenuPosition(false);
       navigate("/Accomodation");
     }, []);
-
 
     const HandClickMenuPeople =() =>{
       if(contextShowMenuPeople){
@@ -242,7 +240,6 @@ const subtotal = getCartSubtotal()
       setContextShowMenuPeople(false)
     }             
 
-
     const hotelReferid = [
       {
         description: "Viaje de Negocios",
@@ -262,7 +259,6 @@ const subtotal = getCartSubtotal()
       }
     ];
   
-
     const testimonials = [
       {
         name: 'Monika Aguilar',
@@ -272,18 +268,14 @@ const subtotal = getCartSubtotal()
       {
         name: 'Marisol Andrea Arenas Gonzalez',
         image: 'https://github.com/rolandoto/image-pms/blob/main/unnamed%20(4).png?raw=true', // Replace with actual image URL
-        feedback: 'Habitaciones cómodas, excelente servio del personal siempre están dispuestos a colaborar en lo que más se necesite',
+        feedback: 'Habitaciones cómodas, excelente servio del personal siempre están dispuestos a colaborar en lo que más se necesite.',
       },
       {
         name: 'Luisa Fernanda Padilla Ciro',
         image: 'https://github.com/rolandoto/image-pms/blob/main/unnamed%20(5).png?raw=true', // Replace with actual image URL
-        feedback: 'Excelente lugar para descansar, tiene lindas vistas, personal altamente calificado a el servicio , habitaciones limpias y cómodas , excelente espacio para ir a pasar un rato agradable',
+        feedback: 'Excelente lugar para descansar, tiene lindas vistas, personal altamente calificado a el servicio, habitaciones limpias y cómodas, excelente espacio para ir a pasar un rato agradable.',
       },
     ];
-    
-
-  
-
 
     const faqs = [
       {
@@ -433,8 +425,6 @@ const handleNext = () => {
 
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
-
-
 
 
  const slides = [
@@ -614,57 +604,70 @@ const [currentIndex, setCurrentIndex] = useState(0);
               </div>
              
           <TitleWelcome />
+
+
+          <div className="max-w-6xl    md:p-0 p-8 mx-auto py-8">
+     <h2 className=" text-left  md:text-[30px] text-[25px] text-[#004E45]  font-lora  mb-6">¿Buscas un lugar cómodo y seguro para tu viaje a Medellín? </h2>
+
+
+     <p class="text-[15px] text-left text-gray-700 leading-relaxed  mx-auto max-w-7xl">
+ Nuestro hotel en el centro de la ciudad es la opción ideal para turistas médicos, viajeros de larga estancia y familias. Ofrecemos habitaciones amplias, servicios personalizados y una ubicación estratégica cerca de todo lo que necesitas. ¡Disfruta de tu estancia en la ciudad de la eterna primavera!
+     </p>
+     <div className="relative mt-8 w-full max-w-6xl mx-auto overflow-hidden">
+     <div
+       className={`transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
+       <img src={slides[currentSlide].image} alt={slides[currentSlide].title} className="w-full  bg-fixed	  h-[550px] object-cover" />
+       <div className="  absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center text-white px-4 text-center">
+         <div className="max-w-3xl mx-auto" >
+         <h2 className="  text-[35px] ">{slides[currentSlide].title}</h2>
+         <p className="mt-2 font-sans  md:text-[15px] text-[10px] ">{slides[currentSlide].description}</p>
+ 
+         <p className="mt-2 font-sans  md:text-[15px] text-[10px] ">{slides[currentSlide].description1}</p>
+         </div>
+       
+       </div>
+     </div>
+
+
+     <button
+       onClick={handlePrev}
+       className="absolute left-4 top-1/2 text-[70px] transform -translate-y-1/2  text-white p-2 rounded-full "
+     >
+       &#8249;
+     </button>
+     <button
+       onClick={handleNext}
+       className="absolute right-4 top-1/2  text-[70px] transform -translate-y-1/2  text-white p-2 rounded-full "
+     >
+       &#8250;
+     </button>
+     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+       {slides.map((_, idx) => (
+         <span
+           key={idx}
+           onClick={() => setCurrentSlide(idx)}
+           className={`block w-2 h-2 rounded-full ${
+             idx === currentSlide ? 'bg-white' : 'bg-gray-400'
+           } cursor-pointer`}
+         />
+       ))}
+     </div>
+   </div>
+   </div>
+
           <Features features={features} />
 
           <RoomPresentaion />
           <div ref={roomSectionRef} >   
             <RoomDetail ref={roomSectionRef}  rooms={rooms} />
           </div>
-          
-          <div className="p-8 mt-10 ">
-          <div className=" max-w-7xl rounded-3xl m-auto p-6 bg-[#004E45] mb-8">
-              <div className="flex justify-center" >
-                <div className=" bg-white  h-12 rounded-full p-2 mr-4">
-                  <GiForkKnifeSpoon color="#004E45" fontSize={30}  />
-                </div>
-                <div>
-                    <h2 className="text-2xl font-lora text-white items-center">
-                    rooftop
-                  </h2>
-                  <p className="text-sm text-white font-lora">(La alimentación incluye menú a veganos y/o alérgicos)</p>
-                </div>
-            </div>
-          </div>
-
-         
-        </div>
-      
-        <div className="max-w-7xl m-auto">
-          <div className="lg:flex lg:p-0 p-8 block justify-between lg:space-x-8 space-y-4 lg:space-y-0">
-            <img
-              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-11-06%20a%20la(s)%201.38.31%20p.m..png?raw=true"
-              alt="Comida 1"
-              className="w-full lg:w-72 h-64 rounded-[30px] shadow-full "
-            />
-            <img
-              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-11-06%20a%20la(s)%201.27.57%20p.m..png?raw=true"
-              alt="Comida 2"
-              className="w-full lg:w-72 h-64 rounded-[30px] shadow-full "
-            />
-            <img
-              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-11-06%20a%20la(s)%201.27.39%20p.m..png?raw=true"
-              alt="Comida 3"
-              className="w-full lg:w-72 h-64 rounded-[30px] shadow-full "
-            />
-          </div>
-      </div>
 
 
 
 
-      <div className="bg-gray-100 py-12 mt-72 ">
+      <div className="bg-[#004E45] py-12 mt-20 ">
           <div className=" max-w-7xl m-auto">
-            <h2 className="text-3xl font-lora text-center mb-8">
+            <h2 className="text-3xl text-white font-lora text-center mb-8">
               Lo que dicen nuestros clientes
             </h2>
             <div className="flex flex-col md:flex-row justify-between items-center  ">
@@ -685,6 +688,44 @@ const [currentIndex, setCurrentIndex] = useState(0);
             </div>
           </div>
         </div>
+          
+          <div className="p-8 mt-10 ">
+          <div className=" max-w-7xl rounded-3xl m-auto p-6 bg-[#004E45] mb-8">
+              <div className="flex justify-center" >
+                <div className=" bg-white  h-12 rounded-full p-2 mr-4">
+                  <GiForkKnifeSpoon color="#004E45" fontSize={30}  />
+                </div>
+                <div>
+                    <h2 className="text-2xl font-lora text-white items-center">
+                    Restaurante Rooftop
+                  </h2>
+                  <p className="text-sm text-white font-lora">(La alimentación incluye menú a veganos y/o alérgicos)</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-7xl m-auto">
+          <div className="lg:flex lg:p-0 p-8 block justify-between lg:space-x-8 space-y-4 lg:space-y-0">
+            <img
+              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-11-06%20a%20la(s)%201.38.31%20p.m..png?raw=true"
+              alt="Comida 1"
+              className="w-full lg:w-72 h-64 rounded-[30px] shadow-full "
+            />
+            <img
+              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-11-06%20a%20la(s)%201.27.57%20p.m..png?raw=true"
+              alt="Comida 2"
+              className="w-full lg:w-72 h-64 rounded-[30px] shadow-full "
+            />
+            <img
+              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-11-07%20a%20la(s)%209.28.34%20a.m..png?raw=true"
+              alt="Comida 3"
+              className="w-full lg:w-72 h-64 rounded-[30px] shadow-full "
+            />
+          </div>
+      </div>
+
+
+
 
           <div ref={roomEventsSectionRef} >
             <Events  />
@@ -736,54 +777,6 @@ const [currentIndex, setCurrentIndex] = useState(0);
     </div>
 
 
-    <div className="max-w-6xl mt-20   md:p-0 p-8 mx-auto py-8">
-     <h2 className=" text-left  md:text-[30px] text-[25px] text-[#004E45]  font-lora  mb-6">¿Buscas un lugar cómodo y seguro para tu viaje a Medellín? </h2>
-
-
-     <p class="text-[15px] text-left text-gray-700 leading-relaxed  mx-auto max-w-7xl">
- Nuestro hotel en el centro de la ciudad es la opción ideal para turistas médicos, viajeros de larga estancia y familias. Ofrecemos habitaciones amplias, servicios personalizados y una ubicación estratégica cerca de todo lo que necesitas. ¡Disfruta de tu estancia en la ciudad de la eterna primavera!
-     </p>
-     <div className="relative mt-8 w-full max-w-6xl mx-auto overflow-hidden">
-     <div
-       className={`transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
-       <img src={slides[currentSlide].image} alt={slides[currentSlide].title} className="w-full  bg-fixed	  h-[550px] object-cover" />
-       <div className="  absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center text-white px-4 text-center">
-         <div className="max-w-3xl mx-auto" >
-         <h2 className="  text-[35px] ">{slides[currentSlide].title}</h2>
-         <p className="mt-2 font-sans  md:text-[15px] text-[10px] ">{slides[currentSlide].description}</p>
- 
-         <p className="mt-2 font-sans  md:text-[15px] text-[10px] ">{slides[currentSlide].description1}</p>
-         </div>
-       
-       </div>
-     </div>
-
-
-     <button
-       onClick={handlePrev}
-       className="absolute left-4 top-1/2 text-[70px] transform -translate-y-1/2  text-white p-2 rounded-full "
-     >
-       &#8249;
-     </button>
-     <button
-       onClick={handleNext}
-       className="absolute right-4 top-1/2  text-[70px] transform -translate-y-1/2  text-white p-2 rounded-full "
-     >
-       &#8250;
-     </button>
-     <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-       {slides.map((_, idx) => (
-         <span
-           key={idx}
-           onClick={() => setCurrentSlide(idx)}
-           className={`block w-2 h-2 rounded-full ${
-             idx === currentSlide ? 'bg-white' : 'bg-gray-400'
-           } cursor-pointer`}
-         />
-       ))}
-     </div>
-   </div>
-   </div>
 
         {/**<AccordionAsk faqs={faqs} />   */}  
           <Footer  PostHotelByIdHotel={PostHotelByIdHotel}  />

@@ -15,7 +15,7 @@ const Header =({scrollToRoomSectionEvent}) =>{
                     <div className="text-3xl font-bold text-indigo-600">
                     <Link to="/">
                         <img 
-                        className="w-[100px]" 
+                        className="w-[50px]" 
                         src="https://github.com/rolandoto/image-pms/blob/main/Logo%20apartments%20.png?raw=true" 
                         alt="Logo de Gallery Hotel" 
                         width="100" 
