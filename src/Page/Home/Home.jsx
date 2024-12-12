@@ -314,13 +314,13 @@ const subtotal = getCartSubtotal()
 
     const rooms = [
       {  title: 'Room Estandar', price:120000 , image:"https://grupo-hoteles.com/storage/app/10/rooms/1174471989-45-rooms-slider-1-estandar4.jpeg", 
-          features:  ["Smart TV","Wi-Fi","Microondas","Escritorio","Wi-Fi","Cocina"] },
+          features:  ["Cama doble","Ventilador","Nevera","Smart TV","Wi-Fi","Escritorio","Cocina"] },
       { title: 'Room Superior ',price:130000, image: "https://grupo-hoteles.com/storage/app/10/rooms/283422645-48-rooms-slider-1-Habitacion-Superior-Hotel-en-Medellin-appartments.webp", 
-        features:['Smart TV',"Wi-Fi","Aire acondicionado","Cocina" ] },
+      features:  ["Cama doble","Aire acondicionado","Nevera","Smart TV","Wi-Fi","Escritorio","Cocina"] },
       { title: 'Room Twin',price:142000, image: "https://grupo-hoteles.com/storage/app/10/rooms/1470384104-46-rooms-slider-1-Habitacion-Twin-Hotel-en-Medellin-appartments.webp", 
-      features: ['Smart TV', 'Wi-Fi',"Cocina"] },
+      features:  ["Cama doble","Ventilador","Nevera","Smart TV","Wi-Fi","Escritorio","Cocina"] },
       { title: 'Room Familiar ',price:230000, image: "https://grupo-hoteles.com/storage/app/10/rooms/578074716-47-rooms-slider-1-Habitacion-Familiar-Hotel-en-Medellin-appartments.webp", 
-      features:['Wi-Fi', 'Smart TV',"Ventiladores de Techo","Cocina"] }
+      features:  ["Cama doble","Cama sencilla","Aire acondicionado o Ventilador","Nevera","Smart TV","Wi-Fi","Escritorio","Cocina"] },
     ];
 
     const monthsToShow = window.innerWidth >= 700 ? 2 : 1; // Cambia 768 según tu punto de ruptura deseado
@@ -733,28 +733,29 @@ const [currentIndex, setCurrentIndex] = useState(0);
           <WhatsappButton />
        
           
-         
+   
+
     <div
-      className="relative h-[950px] bg-cover bg-center"
+      className="relative h-[910px] bg-cover bg-center"
       style={{ backgroundImage: 'url("https://github.com/rolandoto/image-pms/blob/main/Piscina.jpg?raw=true")' }}
     >
       <div className="absolute inset-0 bg-black opacity-60"></div>
       
       {/* Main Message */}
-      <div className="absolute  xl:top-1/4  top-0 text-white left-8 xl:left-16 max-w-lg">
-        <h1 className="text-4xl xl:text-6xl font-bold leading-tight">
-          ¡Queremos que tu estancia sea inolvidable!
-        </h1> 
-        <p className="mt-4 text-base xl:text-lg">
-          Por eso, te invitamos a descubrir otros rincones de la ciudad y a conocer nuevos lugares.
-        </p>
-        <p className="mt-2 text-base xl:text-lg">
-          ¡Consulta nuestras recomendaciones de hoteles para vivir una experiencia inolvidable!
-        </p>
-      </div>
+      <div className="absolute xl:top-1/4 top-[90px] text-white max-w-lg px-6">
+    <h1 className="text-4xl xl:text-6xl font-bold leading-tight">
+      ¡Queremos que tu estancia sea inolvidable!
+    </h1>
+    <p className="mt-4  text-justify text-base  xl:text-lg">
+      Por eso, te invitamos a descubrir otros rincones de la ciudad y a conocer nuevos lugares.
+    </p>
+    <p className="mt-2 text-base xl:text-lg">
+      ¡Consulta nuestras recomendaciones de hoteles para vivir una experiencia inolvidable!
+    </p>
+  </div>
 
       {/* Image Cards */}
-      <div className="absolute  lg:top-1/4 top-[350px] left-0 right-8 flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-end space-y-4 xl:space-y-0 xl:space-x-4">
+      <div className="absolute  lg:top-1/4 top-[410px] left-0 right-8 flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-end space-y-4 xl:space-y-0 xl:space-x-4">
         {hotelReferid.map((caption, index) => (
           <a
             target="_blank"
@@ -765,7 +766,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
             <img
               src={caption.image}
               alt={caption.description}
-              className="w-full h-fulls object-cover"
+              className="w-full h-full object-cover"
             />
             <div className="absolute bottom-0 bg-black bg-opacity-50 text-white text-[16px] md:text-[16px] p-2 w-full text-center">
               {caption.description}
@@ -773,8 +774,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
           </a>
         ))}
       </div>
-
-    </div>
+      </div>  
 
 
 

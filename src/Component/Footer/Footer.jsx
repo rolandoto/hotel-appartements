@@ -13,26 +13,25 @@ const Footer =({PostHotelByIdHotel}) =>{
 
     return (
             <footer className="bg-gray-100   text-black py-8">
-                <div className="mx-auto max-w-7xl p-4  flex flex-col md:flex-row justify-between items-start md:items-center">
+                <div className="mx-auto max-w-7xl p-4  flex flex-col md:flex-row justify-between  md:items-center">
                 <div className="block">
                     <img
                         src="https://github.com/rolandoto/image-pms/blob/main/Logo%20apartments%20.png?raw=true"
                         alt="Logo de Gallery Hotel" 
                         width="100" 
                         height="100"
-                        className="w-48 mb-4"
+                        className="w-48 mb-4 m-auto "
                     />
-                      <button
-     onClick={PostHotelByIdHotel}
-     className="m-auto  w-full px-8 py-4 bg-[#004E45] text-white  transition-colors"
-   >
-     Reservar
-   </button>
+                        <button
+                            onClick={PostHotelByIdHotel}
+                            className="m-auto  w-full px-8 py-4 bg-[#004E45] text-white  transition-colors">
+                            Reservar
+                        </button>
                 </div>
                 
 
                 <div>
-                    <div className="">
+                    <div className="mt-2">
                         <ul className="space-y-2">
                             <li className="flex items-center"> <IconFaWhatsapp /> +57 301 779 01 17</li>
                             <li className="flex items-center mr-6">  <IconsMdEmail  color={"black"}/> reservas@appartments.com.co</li>

@@ -57,9 +57,7 @@ const Header =({scrollToRoomSectionEvent}) =>{
                         />
                     </svg>
                 </button>
-                    </div>
-
-                  
+                    </div> 
             </div>
 
            {menuOpen &&  <div className="lg:hidden flex flex-col mt-4 space-y-2">
