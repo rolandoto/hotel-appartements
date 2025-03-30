@@ -432,19 +432,19 @@ const handleNext = () => {
     title: 'Viaje en familia',
     description: "Nuestro hotel en el corazón de Medellín te ofrece pequeños apartamentos ideales para familias, equipados con cocina, nevera y todas las comodidades que necesitas para sentirte como en casa. ",
     description1:" Vive una experiencia inolvidable mientras exploras la ciudad, con el espacio y confort perfectos para tu estancia. ¡Tu hogar lejos de casa te espera!",
-    image: 'https://github.com/rolandoto/image-pms/blob/main/Dueto/Familia-viajera.jpg?raw=true',
+    image: 'https://h-img3.cloudbeds.com/uploads/315188/_mg_0135-hdr_featured~~66645f906dbce.jpg',
   },
   {
     title: 'Turismo Médico',
     description: 'Si vienes a Medellín por motivos de turismo médico, nuestro hotel es la elección ideal. Estamos cerca de las principales clínicas y centros de salud de la ciudad, y te ofrecemos un ambiente tranquilo y cómodo para tu recuperación. ',
     description1:" Además, nuestras instalaciones están diseñadas para proporcionar el descanso y la atención que necesitas durante tu proceso de recuperación    ",
-    image: 'https://github.com/rolandoto/image-pms/blob/main/Dueto/Turis-Medico.jpg?raw=true',
+    image: 'https://h-img2.cloudbeds.com/uploads/315188/_mg_0135-hdr_featured~~66645f906dbce.jpg',
   },
   {
     title: 'Viajes de larga duración    ',
     description: 'Si planeas una estancia prolongada, nuestro hotel te ofrece todo lo que necesitas para sentirte como en casa. ',
     description1:"Con instalaciones diseñadas para hacer tu vida más cómoda, una ubicación ideal para explorar la ciudad, y servicios que cubren todas tus necesidades, seremos tu hogar lejos de casa durante todo el tiempo que necesites.    ",
-    image: 'https://github.com/rolandoto/image-pms/blob/main/Dueto/Viejo-F.jpg?raw=true',
+    image: 'https://h-img2.cloudbeds.com/uploads/315188/img_1126_gallery~~66646447ed984.jpg',
   },
   // Add more slides as needed
 ];
@@ -474,11 +474,11 @@ const [currentIndex, setCurrentIndex] = useState(0);
               <div className="absolute inset-0  bg-black opacity-30  "></div>
               <div className="relative lg:p-4 p-4 text-center max-w-5xl m-auto z-10 flex flex-col items-initial justify-center h-full  text-white">
                   <h1 className="text-4xl text-center text-left md:text-6xl lg:text-6xl font-lora">
-                    {loadingHotel ?"cargando " :hotel?.nombre}  
+                    {loadingHotel ?"cargando " :hotel?.nombre} Medellín
                   </h1>
-                  <p className="mt-2  text-center text-base md:text-xl lg:text-3xl font-lora font-normal">
-                  Hotel en el centro de Medellín en armonía con la naturaleza
-                  </p>
+                  <h2 className="mt-2  text-center text-base md:text-xl lg:text-3xl font-lora font-normal">
+                  ¿Buscas un lugar cómodo y seguro para tu viaje a Medellín?
+                  </h2>
                   <div className="w-full flex justify-center" >
                       <button className="mt-6 text-center border border-2 w-40 text-white px-6 py-3  " onClick={scrollToRoomSection}>
                           Reservar
@@ -607,7 +607,7 @@ const [currentIndex, setCurrentIndex] = useState(0);
 
 
           <div className="max-w-6xl    md:p-0 p-8 mx-auto py-8">
-     <h2 className=" text-left  md:text-[30px] text-[25px] text-[#004E45]  font-lora  mb-6">¿Buscas un lugar cómodo y seguro para tu viaje a Medellín? </h2>
+     <h2 className=" text-left  md:text-[30px] text-[25px] text-[#004E45]  font-lora  mb-6">¿Buscas un lugar cómodo y seguro para tu viaje a Medellín?</h2>
 
 
      <p class="text-[15px] text-left text-gray-700 leading-relaxed  mx-auto max-w-7xl">
@@ -616,28 +616,30 @@ const [currentIndex, setCurrentIndex] = useState(0);
      <div className="relative mt-8 w-full max-w-6xl mx-auto overflow-hidden">
      <div
        className={`transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
-       <img src={slides[currentSlide].image} alt={slides[currentSlide].title} className="w-full  bg-fixed	  h-[550px] object-cover" />
-       <div className="  absolute inset-0 bg-black bg-opacity-10 flex flex-col justify-center items-center text-white px-4 text-center">
-         <div className="max-w-3xl mx-auto" >
-         <h2 className="  text-[35px] ">{slides[currentSlide].title}</h2>
-         <p className="mt-2 font-sans  md:text-[15px] text-[10px] ">{slides[currentSlide].description}</p>
- 
-         <p className="mt-2 font-sans  md:text-[15px] text-[10px] ">{slides[currentSlide].description1}</p>
-         </div>
-       
+       <img src={slides[currentSlide].image} alt={slides[currentSlide].title} className="w-full    bg-fixed	  h-[550px] object-cover" />
+       <div className=" rounded-2xl absolute inset-0  bg-opacity-10 flex flex-col justify-center items-center text-white px-4 text-center">
+            <div className="md:max-w-3xl max-w-[16rem] mx-auto text-center">
+        <h2 className="text-[35px]">{slides[currentSlide].title}</h2>
+        <p className="mt-2 font-sans md:text-[15px] text-[10px] text-justify">
+          {slides[currentSlide].description}
+        </p>
+        <p className="mt-2 font-sans md:text-[15px] text-[10px] text-justify">
+          {slides[currentSlide].description1}
+        </p>
+      </div>
        </div>
      </div>
 
 
      <button
        onClick={handlePrev}
-       className="absolute left-4 top-1/2 text-[70px] transform -translate-y-1/2  text-white p-2 rounded-full "
+       className="absolute left-0 top-1/2 text-[50px] transform -translate-y-1/2  text-white p-2 rounded-full "
      >
        &#8249;
      </button>
      <button
        onClick={handleNext}
-       className="absolute right-4 top-1/2  text-[70px] transform -translate-y-1/2  text-white p-2 rounded-full "
+       className="absolute right-0 top-1/2  text-[50px] transform -translate-y-1/2  text-white p-2 rounded-full "
      >
        &#8250;
      </button>

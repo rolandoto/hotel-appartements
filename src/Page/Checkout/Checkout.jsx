@@ -16,7 +16,6 @@ import Footer from '../../Component/Footer/Footer';
 import ConfirmationMessage from '../../Component/ConfirmationMessage/ConfirmationMessage';
 import WhatsappButton from '../../Component/WhatsappButton/WhatsappButton';
 import { Environment } from '../../Config/Config';
-import Usetitle from '../../Hooks/UseTitle';
 
 const Checkout  =() =>{
     useFetchData();
@@ -36,8 +35,6 @@ const Checkout  =() =>{
     const cardNumberString = cardNumberArray.join("");
     const now = moment().format('YYYY-MM-DD HH:mm:ss');
 
-
-
     const validate = useValidation();
 
     const Rooms = cart.map(item => ({
@@ -56,18 +53,19 @@ const Checkout  =() =>{
         "quantity": 0
     }));
 
-
-    
     const night = cart.map(item => ({
         startDate: item?.startDate,
         endDate: item?.endDate,
-        price: item?.Price
+        price: item?.Price,
+        validCode: item?.validCode
     }));
 
    
     const subtotalPayment =  night[0]?.price
     const StartDate = night[0]?.startDate
     const EndDate = night[0]?.endDate
+    const validCode = night[0]?.validCode
+
 
     const handleSubmit = async(e) => {
         e.preventDefault();
@@ -78,6 +76,7 @@ const Checkout  =() =>{
                                 token:Environment.Token,
                                 startDate:StartDate,
                                 endDate:EndDate,
+                                promoCode:validCode,
                                 guestFirstName:formValues.name,
                                 guestLastName:formValues.apellido,
                                 guestEmail:formValues.email,
@@ -98,10 +97,16 @@ const Checkout  =() =>{
 
 
 
+
+
     /*const togglePanel = () => {
       setIsOpen(!isOpen);
     };
 */
+
+
+
+
 
     const FillContent =() =>{
 
@@ -125,14 +130,17 @@ const Checkout  =() =>{
         }
     }
 
+
     return (<>
         <Header />
         {loadingCart && <LoadingOverlay title={"Cargando..."} />}
         {loading && <LoadingOverlay title={"Creando reserva..."} />}  
         <WhatsappButton />
-            <HeaderCheckout />
-            <Toaster position="bottom-right"  richColors   />  
+        <HeaderCheckout />
+        <Toaster position="bottom-right"  richColors   />  
             {FillContent()}
+
+          
             <Footer />
             </>)
 

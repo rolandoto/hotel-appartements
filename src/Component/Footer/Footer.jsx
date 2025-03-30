@@ -30,10 +30,9 @@ const Footer =({PostHotelByIdHotel}) =>{
                             Reservar
                         </button>
                 </div>
-                
-
+            
                 <div>
-                    <div className="mt-2">
+                    <div className="mt-6">
                         <ul className="space-y-2">
                             <li className="flex items-center"> <IconFaWhatsapp /> +57 301 779 01 17</li>
                             <li className="flex items-center mr-6">  <IconsMdEmail  color={"black"}/> reservas@appartments.com.co</li>
