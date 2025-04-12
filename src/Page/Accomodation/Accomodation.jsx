@@ -60,8 +60,12 @@ const Accommodation = () => {
     const formattedEnd = moment(state[0]?.endDate).format('DD MMM').toLowerCase();
     const formattedStart = moment(state[0]?.startDate).format('DD MMM').toLowerCase();
     const [coupon, setCoupon] = useState(); // Estado para el cupón
- 
-   
+    
+    
+    useEffect(() => {
+      window.scrollTo(0, 0);
+  }, []);
+  
     const [scrolledbook, setScrolledBook] = useState(false);
     
     useEffect(() => {
