@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const CardRoomDetail =({features,image,title,price}) =>{
+const CardRoomDetail =({features,image,title,price,id}) =>{
 
     const navigate = useNavigate();
 
@@ -11,7 +11,8 @@ const CardRoomDetail =({features,image,title,price}) =>{
 
 
     return (
-            <div  className="mt-20  p-6 rounded-lg relative ">
+            <div key={id} className="mt-20  p-6 rounded-lg relative ">
+                
                 <img
                         src={image}
                         alt={title}

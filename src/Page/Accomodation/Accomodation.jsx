@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { DateRange } from 'react-date-range';
 import esLocale from 'date-fns/locale/es';
 import "./style.css"
@@ -26,10 +26,12 @@ import Header from "../../Component/Header/Header";
 import { FaUser } from "react-icons/fa";
 import { FiArrowRight } from "react-icons/fi";
 import Footer from "../../Component/Footer/Footer";
+import Usetitle from "../../Hooks/UseTitle";
 
 
 const Accommodation = () => {
 
+  Usetitle({title:"Hotel Apartments Medellín Web Oficial."})
 
   const {getHotel} = UseHotelActions()
   const [contextShowMenuPeople, setContextShowMenuPeople] = useState(false);
@@ -58,8 +60,7 @@ const Accommodation = () => {
     const formattedEnd = moment(state[0]?.endDate).format('DD MMM').toLowerCase();
     const formattedStart = moment(state[0]?.startDate).format('DD MMM').toLowerCase();
     const [coupon, setCoupon] = useState(); // Estado para el cupón
-    const [isVisible, setIsVisible] = useState(true); // Estado para mostrar/ocultar el banner
-  
+ 
    
     const [scrolledbook, setScrolledBook] = useState(false);
     
@@ -84,13 +85,65 @@ const Accommodation = () => {
 
     const PostHotelByIdHotel = useCallback(async () => {
       setContextMenuPosition(false);
-      setContextShowMenuPeople(false)
-      await getHotel({propertyID:Environment.propertyID,startDate:formattedStartDate, endDate: formattedEndDate,token:Environment.Token,counPeople:totalCountAdults,promoCode:coupon });
-  }, [formattedStartDate,formattedEndDate,totalCountAdults,isVisible]);
+      setContextShowMenuPeople(false);
+      await getHotel({
+        propertyID: Environment.propertyID,
+        startDate: formattedStartDate,
+        endDate: formattedEndDate,
+        token: Environment.Token,
+        counPeople: totalCountAdults,
+        promoCode: coupon
+      });
+    }, [
+      formattedStartDate,
+      formattedEndDate,
+      totalCountAdults,
+      coupon,
+      getHotel,  // si viene de un contexto o prop
+      setContextMenuPosition       // lo mismo
+    ]);
 
-    useEffect(() =>{
-      PostHotelByIdHotel()
-    },[isVisible])
+
+
+    const PostHotelByIdHotelTwo = useCallback(async () => {
+      setContextMenuPosition(false);
+      setContextShowMenuPeople(false);
+      await getHotel({
+        propertyID: Environment.propertyID,
+        startDate: formattedStartDate,
+        endDate: formattedEndDate,
+        token: Environment.Token,
+        counPeople: totalCountAdults,
+        promoCode: coupon
+      });
+    }, [
+      formattedStartDate,
+      formattedEndDate,
+      totalCountAdults,
+      coupon,
+      getHotel,  // si viene de un contexto o prop
+      setContextMenuPosition       // lo mismo
+    ]);
+
+
+
+    const [isVisible, setIsVisible] = useState(true); // Estado para mostrar/ocultar el banner
+    const hasRun = useRef(false);
+    const [count, setCount] = useState(0);
+    
+    useEffect(() => {
+      // Si nunca ha ejecutado, ejecuta la primera vez
+      if (!hasRun.current) {
+        PostHotelByIdHotelTwo();
+        hasRun.current = true;
+      }
+      // Si isVisible es falso y count es 0, ejecutar la función y aumentar el contador
+      else if (isVisible === false && count === 0) {
+        setCount(prevCount => prevCount + 1);  // Actualiza el contador de forma segura
+        PostHotelByIdHotelTwo();
+      }
+    }, [isVisible, count, PostHotelByIdHotelTwo]);  // Dependencias: isVisible y count
+  
 
     const HandClickMenuPeople =() =>{
       if(contextShowMenuPeople){

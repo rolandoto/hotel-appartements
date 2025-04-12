@@ -4,7 +4,6 @@ import {toast} from "sonner"
 import {setRoomsPromtions,
         setErrorRoomsPromtions,
         loadingRoomsPromtions,
-        
         loadingGetRoomsPromtions,
         setErrorGetRoomsPromtions,
         setRoomsGetPromtions

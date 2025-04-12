@@ -14,13 +14,10 @@ const RoomDetail =({rooms}) =>{
                     Cada habitación está decorada con obras de artistas locales, creando un ambiente único e inspirador.
                 </p>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-6 ">
-                        {rooms.map((room, index) => (
-                            <Fragment>
-                                <CardRoomDetail {...room}
-                                                key={index} />
-                                  
-                            </Fragment>
-                          
+                    {rooms.map((room) => (
+                        <Fragment key={room.id}>
+                            <CardRoomDetail {...room} />
+                        </Fragment>
                         ))}
                     </div>
             </div>
