@@ -8,14 +8,10 @@ import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
 import Usetitle from "../../Hooks/UseTitle";
 
 const DetailEvents =() =>{
-
-    useEffect(() => {
-        // Scrolls to the top of the document on component mount
-        window.scrollTo(0, 0);
-    }, []);
-
-
-
+    Usetitle({title:"Próximos eventos en Medellín"})
+    window.scrollTo(0, 0);
+    
+   
     let { userId } = useParams();
 
     const {geteventsDetail,loadinggetEventsDetail,errorgetEventsDetail}= useSelector(state => state.Events);

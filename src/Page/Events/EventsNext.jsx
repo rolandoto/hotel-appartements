@@ -5,8 +5,10 @@ import Footer from "../../Component/Footer/Footer";
 import UseCart from "../../Hooks/UseCart";
 import Cart from "../../Component/Cart/Cart";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
+import Usetitle from "../../Hooks/UseTitle";
 
 const EventsNext =()  =>{
+    Usetitle({title:"Próximos eventos en Medellín"})
     useEffect(() => {
         // Scrolls to the top of the document on component mount
         window.scrollTo(0, 0);

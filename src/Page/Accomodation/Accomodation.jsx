@@ -31,7 +31,7 @@ import Usetitle from "../../Hooks/UseTitle";
 
 const Accommodation = () => {
 
-  Usetitle({title:"Hotel Apartments Medellín Web Oficial."})
+  Usetitle({title:"Habitaciones Apartments Medellín Web Oficial."})
 
   const {getHotel} = UseHotelActions()
   const [contextShowMenuPeople, setContextShowMenuPeople] = useState(false);
@@ -130,7 +130,7 @@ const Accommodation = () => {
     const [isVisible, setIsVisible] = useState(true); // Estado para mostrar/ocultar el banner
     const hasRun = useRef(false);
     const [count, setCount] = useState(0);
-    
+
     useEffect(() => {
       // Si nunca ha ejecutado, ejecuta la primera vez
       if (!hasRun.current) {

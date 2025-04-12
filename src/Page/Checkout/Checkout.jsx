@@ -19,6 +19,7 @@ import { Environment } from '../../Config/Config';
 
 const Checkout  =() =>{
     useFetchData();
+    
 
     useEffect(() => {
         // Scrolls to the top of the document on component mount
