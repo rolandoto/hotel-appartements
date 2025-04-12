@@ -256,7 +256,6 @@ const {handleSelect,state,
 
     return (
         <div>
-       
            <Header  scrollToRoomSectionEvent={scrollToRoomSectionEvent}   />
            <div className="relative bg-cover bg-center  h-[650px]" style={{ 
                 backgroundImage: `url(https://github.com/rolandoto/image-pms/blob/main/Piscina.jpg?raw=true)`,}}>
@@ -541,32 +540,29 @@ const {handleSelect,state,
       <p className="mt-2 text-base xl:text-lg">
         ¡Consulta nuestras recomendaciones de hoteles para vivir una experiencia inolvidable!
       </p>
-    </div>
-      <div className="absolute  lg:top-1/4 top-[410px] left-0 right-8 flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-end space-y-4 xl:space-y-0 xl:space-x-4">
-        {hotelReferid.map((caption, index) => (
-              <a
-              target="_blank"
-              rel="noreferrer"
-              href={caption.url}
-              key={index}
-              className="relative w-48 h-32 xl:w-64 xl:h-48 cursor-pointer rounded overflow-hidden shadow-lg"
-            >
-            <img
-              src={caption.image}
-              alt={caption.description}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-0 bg-black bg-opacity-50 text-white text-[16px] md:text-[16px] p-2 w-full text-center">
-              {caption.description}
-            </div>
-          </a>
-        ))}
-      </div>
-      </div>  
-
-
+        </div>
+          <div className="absolute  lg:top-1/4 top-[410px] left-0 right-8 flex flex-col xl:flex-row items-center xl:items-start justify-center xl:justify-end space-y-4 xl:space-y-0 xl:space-x-4">
+            {hotelReferid.map((caption, index) => (
+                  <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href={caption.url}
+                  key={index}
+                  className="relative w-48 h-32 xl:w-64 xl:h-48 cursor-pointer rounded overflow-hidden shadow-lg"
+                >
+                <img
+                  src={caption.image}
+                  alt={caption.description}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute bottom-0 bg-black bg-opacity-50 text-white text-[16px] md:text-[16px] p-2 w-full text-center">
+                  {caption.description}
+                </div>
+              </a>
+            ))}
+          </div>
+          </div>  
           <Footer  PostHotelByIdHotel={PostHotelByIdHotel}  />
-    
           </div>
     )
     
