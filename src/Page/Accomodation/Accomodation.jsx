@@ -29,6 +29,7 @@ import Footer from "../../Component/Footer/Footer";
 import Usetitle from "../../Hooks/UseTitle";
 
 
+
 const Accommodation = () => {
 
   Usetitle({title:"Habitaciones Apartments Medellín Web Oficial."})
@@ -47,6 +48,7 @@ const Accommodation = () => {
     childrem ,
     getClassNameForDate} =  UseCalenderSearch()
 
+    
 
     const {getCartSubtotal} = UseCart()
     const subtotal = getCartSubtotal()
