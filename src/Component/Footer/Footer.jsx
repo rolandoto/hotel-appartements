@@ -14,7 +14,7 @@ const Footer =({PostHotelByIdHotel}) =>{
     };
 
     return (
-            <footer className="bg-gray-100   text-black py-8">
+            <footer className="bg-white  text-black py-8">
                 <div className="mx-auto max-w-7xl p-4  flex flex-col md:flex-row justify-between  md:items-center">
                 <div className="block">
                     <img
@@ -50,7 +50,7 @@ const Footer =({PostHotelByIdHotel}) =>{
                 </div>
                
                 <div className=" ">
-                    <div class="bg-gray-100 text-black flex items-center justify-between ">
+                    <div class=" text-black flex items-center justify-between ">
                         <div class="w-full max-w-md mt-6">
                             <h2 class="text-center text-xl font-semibold mb-6">Navegación</h2>
                             <div className="block" >

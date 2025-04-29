@@ -1,6 +1,4 @@
 import React, {useState} from 'react'
-import { addDays} from 'date-fns';
-import moment from "moment";
 
 const Autoconext = React.createContext({})
 
@@ -32,16 +30,20 @@ export const AutoProvider =({children}) =>{
       }
     }
   
+    const today = new Date();                          // Hoy
+    const tomorrow = new Date(today);                  // Clonar la fecha de hoy
+    tomorrow.setDate(tomorrow.getDate() + 1);          // Sumar un día
+  
+    
     const [state, setState] = useState([
       {
-        startDate: null,
-        endDate: null,
+        startDate: today,       // Objeto Date de hoy
+        endDate: tomorrow,      // Objeto Date de mañana
         key: 'selection',
         showDateDisplay: true,
         color: 'transparent',
       }
     ]);
-
 
     const [isStartDateSelected, setIsStartDateSelected] = useState(false);
     const [rangeMessage, setRangeMessage] = useState('');

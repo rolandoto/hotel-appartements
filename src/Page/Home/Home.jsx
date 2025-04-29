@@ -257,10 +257,10 @@ const {handleSelect,state,
     return (
         <div>
            <Header  scrollToRoomSectionEvent={scrollToRoomSectionEvent}   />
-           <div className="relative bg-cover bg-center  h-[650px]" style={{ 
+           <div className="relative bg-cover bg-center  h-[550px]" style={{ 
                 backgroundImage: `url(https://github.com/rolandoto/image-pms/blob/main/Piscina.jpg?raw=true)`,}}>
               <div className="absolute inset-0  bg-black opacity-30  "></div>
-              <div className="relative lg:p-4 p-4 text-center max-w-5xl m-auto z-10 flex flex-col items-initial justify-center h-full  text-white">
+              <div className="relative lg:p-4 p-4 text-center max-w-5xl m-auto z-10 flex flex-col items-initial justify-center h-[500px]  text-white">
                   <h1 className="text-4xl text-center  md:text-6xl lg:text-6xl font-lora">
                       {FillContent()}
                   </h1>

@@ -37,7 +37,7 @@ const FormCheckout=({Country,handleSubmit,loading,formErrors,handleChange,formVa
     
 
     return (<div className= "bg-white " >
-                <div className="flex justify-center   min-h-screen">
+                <div className="flex  mt-12 justify-center   min-h-screen">
                     <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-7xl">
                     <div className="flex flex-col md:flex-row">
                         <div className="w-full md:w-1/2 p-4">
@@ -50,9 +50,7 @@ const FormCheckout=({Country,handleSubmit,loading,formErrors,handleChange,formVa
                                 formValues={formValues}
                                 Country={Country}
                             />
-
                         </div>
-                
                         <div className="w-full md:w-1/2 p-4 bg-gray-50 rounded-lg">
                             <div className="p-6 border border-gray-300 rounded-lg">
                                 <h2 className="text-xl font-bold mb-4">Resumen de tu reserva</h2>
