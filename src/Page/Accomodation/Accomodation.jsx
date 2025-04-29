@@ -177,7 +177,7 @@ const Accommodation = () => {
 
                         <div className="w-1/2 relative">
                           <img
-                            src="https://h-img1.cloudbeds.com/uploads/315192/img_0218_featured~~668c1a114c041.jpg"
+                            src="https://h-img1.cloudbeds.com/uploads/315188/_mg_0135-hdr_featured~~66645f906dbce.jpg"
                             alt="Luxury Suite"
                             className="object-cover h-full w-full"
                           />
