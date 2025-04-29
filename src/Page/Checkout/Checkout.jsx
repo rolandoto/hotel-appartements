@@ -19,7 +19,6 @@ import HeaderStep from '../../Component/Header/HeaderStep';
 const Checkout  =() =>{
     useFetchData();
     
-
     useEffect(() => {
         // Scrolls to the top of the document on component mount
         window.scrollTo(0, 0);
