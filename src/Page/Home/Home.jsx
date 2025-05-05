@@ -142,18 +142,18 @@ const {handleSelect,state,
     const hotelReferid = [
       {
         description: "Viaje de Negocios",
-        image: 'https://github.com/rolandoto/image-pms/blob/main/Logos/47street.jpg?raw=true', // Replace with actual image URL
+        image: 'https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Logos/47street.jpg', // Replace with actual image URL
         url: 'https://47medellinstreethotel.com/',
       
       },
       {
         description: "Viaje romántico en pareja",
-        image: 'https://github.com/rolandoto/image-pms/blob/main/MG_8648-scaled.jpg?raw=true', // Replace with actual image URL
+        image: 'https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/MG_8648-scaled.jpg', // Replace with actual image URL
         url: 'https://galleryhotel.co/',
       },
       {
         description: "Viaje Turismo de Salud",
-        image: 'https://github.com/rolandoto/image-pms/blob/main/_MG_0188%20(1).jpg?raw=true', // Replace with actual image URL
+        image: 'https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/_MG_0188%20(1).jpg', // Replace with actual image URL
         url: 'https://appartments.com.co/',
       }
     ];
@@ -161,17 +161,17 @@ const {handleSelect,state,
     const testimonials = [
       {
         name: 'Monika Aguilar',
-        image: 'https://github.com/rolandoto/image-pms/blob/main/unnamed%20(3).png?raw=true', // Replace with actual image URL
+        image: 'https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/unnamed%20(3).png', // Replace with actual image URL
         feedback: 'El hotel es muy lindo, habitaciones tal como las fotos el servicio muy amable',
       },
       {
         name: 'Marisol Andrea Arenas Gonzalez',
-        image: 'https://github.com/rolandoto/image-pms/blob/main/unnamed%20(4).png?raw=true', // Replace with actual image URL
+        image: 'https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/unnamed%20(4).png', // Replace with actual image URL
         feedback: 'Habitaciones cómodas, excelente servio del personal siempre están dispuestos a colaborar en lo que más se necesite.',
       },
       {
         name: 'Luisa Fernanda Padilla Ciro',
-        image: 'https://github.com/rolandoto/image-pms/blob/main/unnamed%20(5).png?raw=true', // Replace with actual image URL
+        image: 'https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/unnamed%20(5).png', // Replace with actual image URL
         feedback: 'Excelente lugar para descansar, tiene lindas vistas, personal altamente calificado a el servicio, habitaciones limpias y cómodas, excelente espacio para ir a pasar un rato agradable.',
       },
     ];
@@ -258,7 +258,7 @@ const {handleSelect,state,
         <div>
            <Header  scrollToRoomSectionEvent={scrollToRoomSectionEvent}   />
            <div className="relative bg-cover bg-center  h-[650px]" style={{ 
-                backgroundImage: `url(https://github.com/rolandoto/image-pms/blob/main/Piscina.jpg?raw=true)`,}}>
+                backgroundImage: `url(https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Piscina.jpg)`,}}>
               <div className="absolute inset-0  bg-black opacity-30  "></div>
               <div className="relative lg:p-4 p-4 text-center max-w-5xl m-auto z-10 flex flex-col items-initial justify-center h-[560px]  text-white">
                   <h1 className="text-4xl text-center  md:text-6xl lg:text-6xl font-lora">
@@ -495,17 +495,17 @@ const {handleSelect,state,
         <div className="max-w-7xl m-auto">
           <div className="lg:flex lg:p-0 p-8 block justify-between lg:space-x-8 space-y-4 lg:space-y-0">
             <img
-              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-11-06%20a%20la(s)%201.38.31%20p.m..png?raw=true"
+              src="https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Captura%20de%20pantalla%202024-11-06%20a%20la(s)%201.38.31%20p.m..png"
               alt="Comida 1"
               className="w-full lg:w-72 h-64 rounded-[30px] shadow-full "
             />
             <img
-              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-11-06%20a%20la(s)%201.27.57%20p.m..png?raw=true"
+              src="https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Captura%20de%20pantalla%202024-11-06%20a%20la(s)%201.27.57%20p.m..png"
               alt="Comida 2"
               className="w-full lg:w-72 h-64 rounded-[30px] shadow-full "
             />
             <img
-              src="https://github.com/rolandoto/image-pms/blob/main/Captura%20de%20pantalla%202024-11-07%20a%20la(s)%209.28.34%20a.m..png?raw=true"
+              src="https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Captura%20de%20pantalla%202024-11-07%20a%20la(s)%209.28.34%20a.m..png"
               alt="Comida 3"
               className="w-full lg:w-72 h-64 rounded-[30px] shadow-full "
             />
@@ -525,7 +525,7 @@ const {handleSelect,state,
 
       <div
         className="relative h-[910px] bg-cover bg-center"
-        style={{ backgroundImage: 'url("https://github.com/rolandoto/image-pms/blob/main/Piscina.jpg?raw=true")' }}
+        style={{ backgroundImage: 'url("https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Piscina.jpg")' }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         

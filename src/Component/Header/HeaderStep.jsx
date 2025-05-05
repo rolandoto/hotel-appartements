@@ -16,7 +16,7 @@ const HeaderStep =({currentStep}) =>{
           <div className="flex justify-between items-center gap-4 sm:gap-10 w-full sm:w-auto">
             <Link to="/">
             <img
-              src="https://github.com/rolandoto/image-pms/blob/main/Logo%20apartments%20.png?raw=true"
+              src="https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Logo%20apartments%20.png"
               alt="Logo"
                 width="100" 
                 height="100"

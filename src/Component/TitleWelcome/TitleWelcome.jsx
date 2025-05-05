@@ -7,7 +7,7 @@ const TitleWelcome  =() =>{
             <div className="flex flex-col  mt-[260px] lg:mt-24  mx-auto max-w-7xl  md:flex-row items-center my-12 p-4">
                <div className="md:w-1/2 p-4">
                <img
-                    src="https://github.com/rolandoto/image-pms/blob/main/_MG_0188%20(1).jpg?raw=true"
+                    src="https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/_MG_0188%20(1).jpg"
                     alt="Room"
                     className="w-full h-[700px] rounded-3xl shadow-lg"
                 />
@@ -15,7 +15,7 @@ const TitleWelcome  =() =>{
                 <div className="md:w-1/2 p-4 items-center justify-center flex flex-col">
                 <img 
                         className="w-[200px]" 
-                        src="https://github.com/rolandoto/image-pms/blob/main/Logo%20apartments%20.png?raw=true" 
+                        src="https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Logo%20apartments%20.png" 
                         alt="Logo de Gallery Hotel" 
                         width="100" 
                         height="100"

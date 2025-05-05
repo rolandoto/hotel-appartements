@@ -18,7 +18,7 @@ const Footer =({PostHotelByIdHotel}) =>{
                 <div className="mx-auto max-w-7xl p-4  flex flex-col md:flex-row justify-between  md:items-center">
                 <div className="block">
                     <img
-                        src="https://github.com/rolandoto/image-pms/blob/main/Logo%20apartments%20.png?raw=true"
+                        src="https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Logo%20apartments%20.png"
                         alt="Logo de Gallery Hotel" 
                         width="100" 
                         height="100"
@@ -74,7 +74,7 @@ const Footer =({PostHotelByIdHotel}) =>{
                                     <div className=" ">
                                     <div className="flex space-x-4">
                                     <img 
-                                        src="https://github.com/rolandoto/image-pms/blob/main/payment.png?raw=true" 
+                                        src="https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/payment.png" 
                                         alt="Métodos de pago" 
                                         width="200" 
                                         height="100" 

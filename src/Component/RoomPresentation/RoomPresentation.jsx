@@ -23,12 +23,11 @@ const RoomPresentaion =() =>{
                 </div>
                 <div className="md:w-1/2 p-4">
                 <img 
-                    src="https://github.com/rolandoto/image-pms/blob/main/fachada%20(1).png?raw=true" 
+                    src="https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/fachada%20(1).png" 
                     alt="Reservation" 
                     width="600" 
                     height="400" 
-                    className="w-full rounded-3xl  shadow-lg" 
-                />
+                    className="w-full rounded-3xl  shadow-lg" />
                 </div>
                 </div>
             </div>)
