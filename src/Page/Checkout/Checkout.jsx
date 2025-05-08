@@ -15,6 +15,7 @@ import ConfirmationMessage from '../../Component/ConfirmationMessage/Confirmatio
 import WhatsappButton from '../../Component/WhatsappButton/WhatsappButton';
 import { Environment } from '../../Config/Config';
 import HeaderStep from '../../Component/Header/HeaderStep';
+import SeoHead from '../../Component/SeoHead/SeoHead';
 
 const Checkout  =() =>{
     useFetchData();
@@ -134,7 +135,12 @@ const Checkout  =() =>{
         {loading && <LoadingOverlay title={"Creando reserva..."} />}  
         <WhatsappButton />
         <HeaderStep currentStep={2} />
-        <Toaster position="bottom-right"  richColors   />  
+        <Toaster position="bottom-right"  richColors   /> 
+        <SeoHead
+            title="Habitaciones | Check out"
+            description="Vive una experiencia única en nuestros apartamentos"
+            url="https://appartments.com.co/Checkout"
+        /> 
         {FillContent()}
         <Footer />
             </>)

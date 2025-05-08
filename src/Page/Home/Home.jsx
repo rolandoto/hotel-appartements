@@ -25,6 +25,7 @@ import { useSelector } from "react-redux";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import Usetitle from "../../Hooks/UseTitle";
+import SeoHead from "../../Component/SeoHead/SeoHead";
 
 const Home =() =>{
   const navigate = useNavigate();
@@ -256,6 +257,11 @@ const {handleSelect,state,
 
     return (
         <div>
+          <SeoHead
+              title="Hotel Appartments"
+              description="Hotel Appartments Medellín"
+              url="https://appartments.com.co/"
+            />
            <Header  scrollToRoomSectionEvent={scrollToRoomSectionEvent}   />
            <div className="relative bg-cover bg-center  h-[650px]" style={{ 
                 backgroundImage: `url(https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Piscina.jpg)`,}}>
