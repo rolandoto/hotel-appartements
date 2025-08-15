@@ -5,6 +5,7 @@ import garantia from "../../Image/garantia.pdf"
 
 const Footer =({PostHotelByIdHotel}) =>{
 
+
     const handleFacebook = () => {
         window.open("https://www.facebook.com/apartments.med", "_blank");
     };
@@ -12,6 +13,8 @@ const Footer =({PostHotelByIdHotel}) =>{
     const handleInstagram = () => {
         window.open("https://www.instagram.com/appartments.med", "_blank");
     };
+
+    
 
     return (
             <footer className="bg-white  text-black py-8">
@@ -30,7 +33,7 @@ const Footer =({PostHotelByIdHotel}) =>{
                             Reservar
                         </button>
                 </div>
-            
+                
                 <div>
                     <div className="mt-6">
                         <ul className="space-y-2">

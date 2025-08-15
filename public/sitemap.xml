@@ -6,4 +6,10 @@
   <url>
     <loc>https://www.appartments.com.co/Accomodation</loc>
   </url>
+  <url>
+    <loc>https://www.appartments.com.co/Accomodation</loc>
+    <lastmod>2025-05-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

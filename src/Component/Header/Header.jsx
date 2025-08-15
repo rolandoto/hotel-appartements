@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Header =({scrollToRoomSectionEvent}) =>{
+const Header =() =>{
 
     const [menuOpen, setMenuOpen] = useState(false);
 
@@ -9,7 +9,15 @@ const Header =({scrollToRoomSectionEvent}) =>{
       setMenuOpen(!menuOpen);
     };
 
+
+    const navitation =[
+        {name:"Inicio",href:"/"},
+        {name:"Próximos eventos",href:"/Events"},
+        {name:"Reservas",href:"/Accomodation"}
+    ]
+
     return (
+        <header>
             <nav className="  w-full z-40 items-center fixed p-3 lg:bg-gray-100  bg-gray-0  shadow-md">
                     <div  className="lg:flex hidden    mx-auto  items-center   justify-between   max-w-7xl" > 
                     <div className="text-3xl font-bold text-indigo-600">
@@ -23,11 +31,10 @@ const Header =({scrollToRoomSectionEvent}) =>{
                         />
                     </Link>
                     </div>
-
                     <div className=" hidden lg:block   space-x-4">
-                        <Link to="/" className="text-black cursor-pointer text-[16px] font-normal  "  >Inicio</Link>
-                        <Link to="/Events" className="text-black cursor-pointer text-[16px] font-normal "   >Próximos eventos</Link>
-                        <Link to="/Accomodation" className="text-black  cursor-pointer text-[16px] font-normal "  >Reservas</Link>
+                    {navitation.map((item) =>(
+                        <Link to={item.href} key={item.name} className="text-black cursor-pointer text-[16px] font-normal  "  >{item.name}</Link>
+                    ))}
                     </div>
                     <div className="hidden lg:block " >
                         <a 
@@ -79,6 +86,8 @@ const Header =({scrollToRoomSectionEvent}) =>{
                         </div>
                 }
         </nav>  
+                    
+        </header>
     )
 
 }

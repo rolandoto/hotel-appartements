@@ -19,7 +19,8 @@ function App() {
       <AutoProvider>
       <BrowserRouter> 
         <Routes>
-          <Route exact path="/" element={<Home/> } />
+          <Route  path="/" element={<Home/> } />
+          <Route  path="/hotel" element={<Home/> } />
           <Route exact path="/Accomodation" element={<Accommodation/> } />
           <Route exact path="/Checkout" element={<Checkout/> } />
           <Route exact path="/Events" element={<EventsNext />} />
