@@ -4,9 +4,13 @@ import {toast} from "sonner"
 import {setRoomsPromtions,
         setErrorRoomsPromtions,
         loadingRoomsPromtions,
+        
         loadingGetRoomsPromtions,
         setErrorGetRoomsPromtions,
-        setRoomsGetPromtions
+        setRoomsGetPromtions,
+        loadingRoomsEmail,
+        setErrorRoomEmail,
+        setRoomEmail
         } from "../reducers/ApiRoomsPromotion"
 
 const useRoomsPromotions =() =>{
@@ -19,14 +23,14 @@ const useRoomsPromotions =() =>{
             const response  = await HttpClient.PostRoomPromotions({days})
             if(response){
                 dispatch(setRoomsPromtions(response)) 
-               
+             
             }else{
                 dispatch(setErrorRoomsPromtions("no found")) 
-                
+               
             }
         } catch (error) {
             dispatch(setErrorRoomsPromtions("no found")) 
-         
+           
         }
     }
 
@@ -39,17 +43,40 @@ const useRoomsPromotions =() =>{
                
             }else{
                 dispatch(setErrorGetRoomsPromtions("no found")) 
-                
+               
             }
         } catch (error) {
             dispatch(setErrorGetRoomsPromtions("no found")) 
-          
+            
         }
+    }
+
+
+    const PostRoomEmail =async({propertyID,Email,Username}) =>{
+        dispatch(loadingRoomsEmail())
+     
+            try {
+                    const response  = await HttpClient.sendPromotionalEmail({propertyID,Email,Username})
+                    
+                    if(response.ok){
+                        dispatch(setRoomEmail(response)) 
+                        toast.success("TE SUSCRIBIRSTE CORRECTAMENTE")
+                    }else{
+                        dispatch(setErrorRoomEmail("no found")) 
+                            toast.error(response.msg)
+                    }
+                    } catch (error) {
+                        
+                        dispatch(setErrorRoomEmail("no found")) 
+                        toast.error("Error en el sistema")
+            }
+
     }
 
     return {
         PostRoomsPromotions,
-        GetRoomsPromotions
+        GetRoomsPromotions,
+        PostRoomEmail
     }
 
 }

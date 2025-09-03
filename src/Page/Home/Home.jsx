@@ -26,6 +26,7 @@ import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import Usetitle from "../../Hooks/UseTitle";
 import SeoHead from "../../Component/SeoHead/SeoHead";
+import SubscriptionPopup from "../../Component/SubscriptionPopup/SubscriptionPopup";
 
 const Home =() =>{
   const navigate = useNavigate();
@@ -262,6 +263,7 @@ const {handleSelect,state,
               description="Hotel Appartments Medellín"
               url="https://appartments.com.co/"
             />
+               <SubscriptionPopup />
            <Header  scrollToRoomSectionEvent={scrollToRoomSectionEvent}   />
            <div className="relative bg-cover bg-center  h-[650px]" style={{ 
                 backgroundImage: `url(https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Piscina.jpg)`,}}>
@@ -423,8 +425,6 @@ const {handleSelect,state,
       </div>
        </div>
      </div>
-
-
           <button
             onClick={handlePrev}
             className="absolute left-0 top-1/2 text-[50px] transform -translate-y-1/2  text-white p-2 rounded-full "
