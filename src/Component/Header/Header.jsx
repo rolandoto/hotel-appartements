@@ -12,7 +12,6 @@ const Header =() =>{
 
     const navitation =[
         {name:"Inicio",href:"/"},
-        {name:"Próximos eventos",href:"/Events"},
         {name:"Reservas",href:"/Accomodation"}
     ]
 
