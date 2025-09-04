@@ -5,12 +5,12 @@ const TitleWelcome  =() =>{
 
     return (
             <div className="flex flex-col  mt-[260px] lg:mt-24  mx-auto max-w-7xl  md:flex-row items-center my-12 p-4">
-               <div className="md:w-1/2 p-4">
-               <img
-                    src="https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/_MG_0188%20(1).jpg"
-                    alt="Room"
-                    className="w-full h-[700px] rounded-3xl shadow-lg"
-                />
+              <div className="md:w-1/2 p-4">
+                    <img
+                        src="https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/_MG_0188%20(1).jpg"
+                        alt="Room"
+                        className="w-full h-auto max-h-[700px] rounded-3xl shadow-lg object-cover"
+                    />
                     </div>
                 <div className="md:w-1/2 p-4 items-center justify-center flex flex-col">
                 <img 
@@ -29,4 +29,4 @@ const TitleWelcome  =() =>{
 
 }
 
-export default TitleWelcome
+export default TitleWelcome 

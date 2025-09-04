@@ -31,7 +31,7 @@ import SubscriptionPopup from "../../Component/SubscriptionPopup/SubscriptionPop
 const Home =() =>{
   const navigate = useNavigate();
   moment.locale('es');
-  Usetitle({title:"Hotel Apartments Medellín"})
+  Usetitle({title:"Amor y amistad -10% Hotel appartments | Reserva Ya"})
   
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -402,54 +402,7 @@ const {handleSelect,state,
           <TitleWelcome />
 
 
-          <div className="max-w-6xl    md:p-0 p-8 mx-auto py-8">
-     <h2 className=" text-left  md:text-[30px] text-[25px] text-[#004E45]  font-lora  mb-6">¿Buscas un lugar cómodo y seguro para tu viaje a Medellín?</h2>
-
-
-     <p class="text-[15px] text-left text-gray-700 leading-relaxed  mx-auto max-w-7xl">
- Nuestro hotel en el centro de la ciudad es la opción ideal para turistas médicos, viajeros de larga estancia y familias. Ofrecemos habitaciones amplias, servicios personalizados y una ubicación estratégica cerca de todo lo que necesitas. ¡Disfruta de tu estancia en la ciudad de la eterna primavera!
-     </p>
-     <div className="relative mt-8 w-full max-w-6xl mx-auto overflow-hidden">
-     <div
-       className={`transition-opacity duration-500 ${fade ? 'opacity-100' : 'opacity-0'}`}>
-       <img src={slides[currentSlide].image} alt={slides[currentSlide].title} className="w-full    bg-fixed	  h-[550px] object-cover" />
-       <div className=" rounded-2xl absolute inset-0  bg-opacity-10 flex flex-col justify-center items-center text-white px-4 text-center">
-            <div className="md:max-w-3xl max-w-[16rem] mx-auto text-center">
-        <h2 className="text-[35px]">{slides[currentSlide].title}</h2>
-        <p className="mt-2 font-sans md:text-[15px] text-[10px] text-justify">
-          {slides[currentSlide].description}
-        </p>
-        <p className="mt-2 font-sans md:text-[15px] text-[10px] text-justify">
-          {slides[currentSlide].description1}
-        </p>
-      </div>
-       </div>
-     </div>
-          <button
-            onClick={handlePrev}
-            className="absolute left-0 top-1/2 text-[50px] transform -translate-y-1/2  text-white p-2 rounded-full "
-          >
-            &#8249;
-          </button>
-          <button
-            onClick={handleNext}
-            className="absolute right-0 top-1/2  text-[50px] transform -translate-y-1/2  text-white p-2 rounded-full "
-          >
-            &#8250;
-          </button>
-          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
-            {slides.map((_, idx) => (
-              <span
-                key={idx}
-                onClick={() => setCurrentSlide(idx)}
-                className={`block w-2 h-2 rounded-full ${
-                  idx === currentSlide ? 'bg-white' : 'bg-gray-400'
-                } cursor-pointer`}
-              />
-            ))}
-          </div>
-        </div>
-        </div>
+     
           <Features features={features} />
           <RoomPresentaion />
           <div ref={roomSectionRef} >   
@@ -457,7 +410,18 @@ const {handleSelect,state,
           </div>
 
 
-
+    <div className="relative flex mt-40 hover-punter justify-center items-center p-4">
+  <div className="map-container w-[90%] md:w-[70%] h-[250px] md:h-[400px] rounded-lg overflow-hidden shadow-lg">
+    <iframe
+      title="Google Map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1400471648612!2d-75.5653578!3d6.245268299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442f4d8ca113ab%3A0xc2ef603db9362ea8!2sApparments%20Hotel%20Medellin!5e0!3m2!1sen!2sco!4v1757013342448!5m2!1sen!2sco"
+      className="w-full h-full border-0"
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
 
       <div className="bg-[#004E45] py-12 mt-20 ">
           <div className=" max-w-7xl m-auto">
@@ -521,16 +485,14 @@ const {handleSelect,state,
 
 
 
-          <div ref={roomEventsSectionRef} >
-            <Events  />
-          </div>
+       
           <WhatsappButton />
        
-          
+      
    
 
       <div
-        className="relative h-[910px] bg-cover bg-center"
+        className="relative h-[910px] mt-6 bg-cover bg-center"
         style={{ backgroundImage: 'url("https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Piscina.jpg")' }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>

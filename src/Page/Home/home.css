@@ -23,7 +23,6 @@
 
 .hover-punter{
   cursor: pointer;
-  padding:8px;
   transition:  0.3s;
   cursor: pointer ;
  z-index: 10;

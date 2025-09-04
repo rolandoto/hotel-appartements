@@ -8,7 +8,7 @@ const RoomPresentaion =() =>{
         navigate("/Accomodation");
     }
 
-    return (  <div className="bg-[#004E45] py-12 px-4">
+    return (  <div className="bg-[#004E45] md:py-10 py-0 pb-80 px-4">
                 <div className="container mx-auto max-w-7xl   flex flex-col md:flex-row items-center">
                 <div className="md:w-1/2 p-4 text-">
                     <h2 className="text-3xl font-normal text-center  text-white text-[30px] font-lora ">Conecta con la naturaleza en el corazón de Medellín…
