@@ -233,7 +233,7 @@ const CardAccomodation =({  roomTypeName,
                         </div>
                       </div>
                       <button onClick={handleAddToCart} className="w-full bg-[#004e45] text-white py-2 px-4  transition">
-                        Reservar
+                        Selecionar
                       </button>
                     </div>
                   </div>
