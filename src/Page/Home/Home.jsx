@@ -14,19 +14,17 @@ import RoomDetail from "../../Component/RoomDetail/RoomDetail";
 import RoomPresentaion from "../../Component/RoomPresentation/RoomPresentation";
 import "./home.css"
 import { IconRiCloseLargeLine, IconsFaConciergeBell, IconsFaGlassMartini, IconsFaStore, IconsGiForkKnifeSpoon, IconsaCar } from "../../Component/Icons/Icons";
-import 'react-date-range/dist/styles.css'; // import the default styles
-import 'react-date-range/dist/theme/default.css'; // import the default theme
+import 'react-date-range/dist/styles.css';
+import 'react-date-range/dist/theme/default.css'; 
 import moment from 'moment';
 import 'moment/locale/es';
 import UseCart from "../../Hooks/UseCart";
 import Cart from "../../Component/Cart/Cart";
 import UseHotelActions from "../../Actions/useHotelsActions";
-import { useSelector } from "react-redux";
 import WhatsappButton from "../../Component/WhatsappButton/WhatsappButton";
 import { GiForkKnifeSpoon } from "react-icons/gi";
 import Usetitle from "../../Hooks/UseTitle";
 import SeoHead from "../../Component/SeoHead/SeoHead";
-import SubscriptionPopup from "../../Component/SubscriptionPopup/SubscriptionPopup";
 
 const Home =() =>{
   const navigate = useNavigate();
@@ -53,31 +51,15 @@ const {handleSelect,state,
       getClassNameForDate } =  UseCalenderSearch()
 
   const {getCartSubtotal} = UseCart()
-  const { hotelList, loadingHotel, errorHotel } = useSelector((state) => state.Hotel);
-
 
   const { getListHotel } = UseHotelActions();  // Obtienes la función
 
   useEffect(() => {
-    getListHotel();  // Llamada a getListHotel
+    getListHotel(); 
   }, [getListHotel]); 
 
-  const FillContent = () => {
-    if (loadingHotel) {
-      return <>Cargando...</>;  // Muestra un mensaje de carga
-    }
-  
-    if (errorHotel) {
-      return <>Error al cargar los hoteles</>;  // Muestra un mensaje de error
-    }
-    const findHotelById = (hotels, id) => hotels.find(hotel => hotel.id_hotel === id);
-    const hotel = findHotelById(hotelList, 10);
-    return <>{hotel?.nombre}</>;  // Muestra un mensaje cuando los hoteles están listos
-  };
-
+ 
   const subtotal = getCartSubtotal()
-
-
   const features = [
     { icon: <IconsFaGlassMartini/>, title: 'Cóctel de bienvenida' },
     { icon: <IconsGiForkKnifeSpoon/>, title: 'Desayuno incluido' },
@@ -93,7 +75,6 @@ const {handleSelect,state,
             roomSectionRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     };
-  
 
     const scrollToRoomSectionEvent = () => {
       if (roomEventsSectionRef.current) {
@@ -101,8 +82,6 @@ const {handleSelect,state,
       }
     };
 
-     
-        
       
     const formattedStartDateToString = moment(state?.[0]?.startDate ?? '').format('DD MMM YYYY').toLowerCase();
     const formattedEndDateToString = moment(state?.[0]?.endDate ?? '').format('DD MMM YYYY').toLowerCase();
@@ -212,50 +191,6 @@ const {handleSelect,state,
     ];
 
     const monthsToShow = window.innerWidth >= 700 ? 2 : 1; // Cambia 768 según tu punto de ruptura deseado
-
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const [fade, setFade] = useState(true); // Estado para manejar la opacidad
-
-    const handlePrev = () => {
-      setFade(false); // Inicia el efecto de desvanecimiento
-      setTimeout(() => {
-        setCurrentSlide((prevSlide) => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
-        setFade(true); 
-      }, 500); 
-    };
-
-    const handleNext = () => {
-      setFade(false); // Inicia el efecto de desvanecimiento
-      setTimeout(() => {
-        setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
-        setFade(true); 
-      }, 500);
-    };
-    
-    const slides = [
-      {
-        title: 'Viaje en familia',
-        description: "Nuestro hotel en el corazón de Medellín te ofrece pequeños apartamentos ideales para familias, equipados con cocina, nevera y todas las comodidades que necesitas para sentirte como en casa. ",
-        description1:" Vive una experiencia inolvidable mientras exploras la ciudad, con el espacio y confort perfectos para tu estancia. ¡Tu hogar lejos de casa te espera!",
-        image: 'https://h-img3.cloudbeds.com/uploads/315188/_mg_0135-hdr_featured~~66645f906dbce.jpg',
-      },
-      {
-        title: 'Turismo Médico',
-        description: 'Si vienes a Medellín por motivos de turismo médico, nuestro hotel es la elección ideal. Estamos cerca de las principales clínicas y centros de salud de la ciudad, y te ofrecemos un ambiente tranquilo y cómodo para tu recuperación. ',
-        description1:" Además, nuestras instalaciones están diseñadas para proporcionar el descanso y la atención que necesitas durante tu proceso de recuperación    ",
-        image: 'https://h-img2.cloudbeds.com/uploads/315188/_mg_0135-hdr_featured~~66645f906dbce.jpg',
-      },
-      {
-        title: 'Viajes de larga duración    ',
-        description: 'Si planeas una estancia prolongada, nuestro hotel te ofrece todo lo que necesitas para sentirte como en casa. ',
-        description1:"Con instalaciones diseñadas para hacer tu vida más cómoda, una ubicación ideal para explorar la ciudad, y servicios que cubren todas tus necesidades, seremos tu hogar lejos de casa durante todo el tiempo que necesites.    ",
-        image: 'https://h-img2.cloudbeds.com/uploads/315188/img_1126_gallery~~66646447ed984.jpg',
-      },
-      // Add more slides as needed
-    ];
-
-
-
     return (
         <div>
           <SeoHead
@@ -263,14 +198,14 @@ const {handleSelect,state,
               description="Hotel Appartments Medellín"
               url="https://appartments.com.co/"
             />
-               <SubscriptionPopup />
+             
            <Header  scrollToRoomSectionEvent={scrollToRoomSectionEvent}   />
            <div className="relative bg-cover bg-center  h-[650px]" style={{ 
                 backgroundImage: `url(https://raw.githubusercontent.com/rolandoto/image-pms/refs/heads/main/Piscina.jpg)`,}}>
               <div className="absolute inset-0  bg-black opacity-30  "></div>
               <div className="relative lg:p-4 p-4 text-center max-w-5xl m-auto z-10 flex flex-col items-initial justify-center h-[560px]  text-white">
                   <h1 className="text-4xl text-center  md:text-6xl lg:text-6xl font-lora">
-                      {FillContent()}
+                      Hotel Apartments
                   </h1>
                   <h2 className="mt-2  text-center text-base md:text-xl lg:text-3xl font-lora font-normal">
                   ¿Buscas un lugar cómodo y seguro para tu viaje a Medellín?
@@ -410,18 +345,18 @@ const {handleSelect,state,
           </div>
 
 
-    <div className="relative flex mt-40 hover-punter justify-center items-center p-4">
-  <div className="map-container w-[90%] md:w-[70%] h-[250px] md:h-[400px] rounded-lg overflow-hidden shadow-lg">
-    <iframe
-      title="Google Map"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1400471648612!2d-75.5653578!3d6.245268299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442f4d8ca113ab%3A0xc2ef603db9362ea8!2sApparments%20Hotel%20Medellin!5e0!3m2!1sen!2sco!4v1757013342448!5m2!1sen!2sco"
-      className="w-full h-full border-0"
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    ></iframe>
-  </div>
-</div>
+        <div className="relative flex mt-40 hover-punter justify-center items-center p-4">
+        <div className="map-container w-[90%] md:w-[70%] h-[250px] md:h-[400px] rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            title="Google Map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1400471648612!2d-75.5653578!3d6.245268299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e442f4d8ca113ab%3A0xc2ef603db9362ea8!2sApparments%20Hotel%20Medellin!5e0!3m2!1sen!2sco!4v1757013342448!5m2!1sen!2sco"
+            className="w-full h-full border-0"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
 
       <div className="bg-[#004E45] py-12 mt-20 ">
           <div className=" max-w-7xl m-auto">

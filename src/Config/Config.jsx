@@ -17,5 +17,3 @@ export const config = {
    propertyID:"315188",
    Token:"cbat_poDgrGSWEYeavnQO9fOWk0vnyLsgUqYV"
 }
-
-
