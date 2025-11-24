@@ -82,7 +82,7 @@ const useReservationCreate =() =>{
         dispatch(loading())
         try {
 
-             const popup = window.open("", "_blank");
+            
 
             const response  = await HttpClient.PostpostReservationPse({propertyID,
                                                                     token,
@@ -99,9 +99,10 @@ const useReservationCreate =() =>{
                                                                     bank,
                                                                     subtotal,
                                                                     promoCode})
-           
+        
             if(response){
                 dispatch(setCreateReservation(response)) 
+                const popup = window.open("", "_blank");
                 popup.location.href = response          
                 RemoveCartAll()
                 toast.success(`Exitoso`)

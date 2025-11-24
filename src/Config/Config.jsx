@@ -9,7 +9,7 @@ export const config = {
  }
  
  export const CLoubedsRoute ={
-    serverRoute: "https://railway.grupo-hoteles.com"
+   serverRoute: "https://railway.grupo-hoteles.com"
     //serverRoute:"http://localhost:3001"
  }
  
