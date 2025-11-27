@@ -29,7 +29,7 @@ import SeoHead from "../../Component/SeoHead/SeoHead";
 const Home =() =>{
   const navigate = useNavigate();
   moment.locale('es');
-  Usetitle({title:"Amor y amistad -10% Hotel appartments | Reserva Ya"})
+  Usetitle({title:"Black Friday - 10% Hotel hotel Apparments | Reserva Ya"})
   
   useEffect(() => {
     window.scrollTo(0, 0);
